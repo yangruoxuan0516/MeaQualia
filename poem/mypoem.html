@@ -1,0 +1,569 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>一些习作 - MyDiary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Bienvenu! Bienvenue!</a></li><li class="chapter-item expanded "><a href="../poem/poem.html"><strong aria-hidden="true">1.</strong> 诗啊</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poem/mypoem.html" class="active"><strong aria-hidden="true">1.1.</strong> 一些习作</a></li><li class="chapter-item expanded "><a href="../poem/poemGuideline.html"><strong aria-hidden="true">1.2.</strong> 一个教程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poem/poemPart1.html"><strong aria-hidden="true">1.2.1.</strong> Part1</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../diary/0.html"><strong aria-hidden="true">2.</strong> 我瞎写的但我乐意</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../diary/1.html"><strong aria-hidden="true">2.1.</strong> 放假回家和废话产出计划</a></li><li class="chapter-item expanded "><a href="../diary/2.html"><strong aria-hidden="true">2.2.</strong> 美丽的人、风和水煮胡萝卜</a></li><li class="chapter-item expanded "><a href="../diary/3.html"><strong aria-hidden="true">2.3.</strong> 第一次见到小家伙</a></li><li class="chapter-item expanded "><a href="../diary/4.html"><strong aria-hidden="true">2.4.</strong> 月嫂阿姨在做饭</a></li><li class="chapter-item expanded "><a href="../diary/5.html"><strong aria-hidden="true">2.5.</strong> 一些广场舞经历</a></li><li class="chapter-item expanded "><a href="../diary/6.html"><strong aria-hidden="true">2.6.</strong> 爸爸小时候天上有很多星星</a></li><li class="chapter-item expanded "><a href="../diary/7.html"><strong aria-hidden="true">2.7.</strong> “Feel everything you obviously do”</a></li><li class="chapter-item expanded "><a href="../diary/8.html"><strong aria-hidden="true">2.8.</strong> 水库！我跳进水库！</a></li><li class="chapter-item expanded "><a href="../diary/9.html"><strong aria-hidden="true">2.9.</strong> 一些可以跨越时间的关系</a></li><li class="chapter-item expanded "><a href="../diary/10.html"><strong aria-hidden="true">2.10.</strong> 标签意味着长大吗</a></li><li class="chapter-item expanded "><a href="../diary/11.html"><strong aria-hidden="true">2.11.</strong> 非常非常非常难过</a></li><li class="chapter-item expanded "><a href="../diary/12.html"><strong aria-hidden="true">2.12.</strong> 偷闲、红樱桃月饼、人和开集</a></li><li class="chapter-item expanded "><a href="../diary/13.html"><strong aria-hidden="true">2.13.</strong> 电磁学基础的浪漫——我看向远方的时候在想什么？</a></li><li class="chapter-item expanded "><a href="../diary/14.html"><strong aria-hidden="true">2.14.</strong> 这首歌让我想起我也曾生活</a></li><li class="chapter-item expanded "><a href="../diary/15.html"><strong aria-hidden="true">2.15.</strong> 花钱好开心</a></li><li class="chapter-item expanded "><a href="../diary/16.html"><strong aria-hidden="true">2.16.</strong> WEI-野蛮地生活</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">MyDiary</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><font color="#808080"><em>大学前暑假的一些初步尝试</em><br />
+<em>视格律若无物.jpg</em></font><br /></p>
+<h2 id="雨"><a class="header" href="#雨">雨</a></h2>
+<p>天幕千丝垂，地鉴万皱生。<br />
+细雨湿柳色，微风立钓翁。</p>
+<h2 id="夏夜晚风"><a class="header" href="#夏夜晚风">夏夜晚风</a></h2>
+<p>云涌孤月黯，暮垂百花缄。<br />
+薰风应南来，代君拂罗衫。</p>
+<h2 id="夏末蝉声"><a class="header" href="#夏末蝉声">夏末蝉声</a></h2>
+<p>昨日碧荫荣，今朝秋色生。<br />
+可叹一夕雨，足使节气更。<br />
+启牖西风冷，出庭落叶横。<br />
+唯有枝间蝉，依旧迎初晴。<br />
+唧唧复啾啾，声似激浪行。<br />
+秋劫将至君知否？自沐曙光朝天鸣！  <br><br><br></p>
+<p><font color="#808080"><em>开学后的一些继续胡乱写</em></font><br /></p>
+<h2 id="猫"><a class="header" href="#猫">猫</a></h2>
+<p>猫居宿舍前，饮食人自添。<br />
+兴起随蝶舞，倦来伴草眠。<br />
+毛因风吹动，梦由鸟吟酣。<br />
+不见早八人，逍遥会神仙。  <br><br><br></p>
+<p><font color="#808080"><em>开始上张老师的诗词鉴赏创作课了</em>
+<em>一些作业</em></font><br /></p>
+<h2 id="思公子二首"><a class="header" href="#思公子二首">思公子二首</a></h2>
+<h3 id="其一"><a class="header" href="#其一">其一</a></h3>
+<p>至晚暑气散，对月虫呢喃。<br />
+闲闲桥头过，隔水松柏缄。</p>
+<h3 id="其二"><a class="header" href="#其二">其二</a></h3>
+<p>湖深不见鱼，水远不见帆。<br />
+清风如有意，代君拂罗衫。</p>
+<h2 id="夏日午时歌"><a class="header" href="#夏日午时歌">夏日午时歌</a></h2>
+<p>池风凉，带翠过荷塘，<br />
+寒露荷花隔水香，香满前后亭廊。<br />
+慢饮茶凉，鸫鸟幽啼窗，<br />
+情思荡，帘外香樟撒影长。</p>
+<h2 id="战后行"><a class="header" href="#战后行">战后行</a></h2>
+<p>旗坠战马逝，万魂滞西域。<br />
+浮浮晨雾里，我独暂还息。<br />
+照我日尤烈，载我地犹默。<br />
+日红近血色，迷目不得拭。<br />
+君主令开疆，开疆曷有极？<br />
+夙夜祝还乡，有人长相忆。<br />
+料今三五日，对月独自织。</p>
+<h2 id="桂满树"><a class="header" href="#桂满树">桂满树</a></h2>
+<p>桂满树兮，其花采采。<br />
+桂饼之芳兮，美人之贻。<br />
+桂满院兮，其香久久。<br />
+桂饼之圆兮，相见有时。</p>
+<h2 id="花含苞"><a class="header" href="#花含苞">花含苞</a></h2>
+<p>花之含苞，叶柔且蜷。<br />
+初绽带露，其谁不怜？<br />
+花之灼灼，有蜂与蝶。<br />
+春光漫洒兮，娇波媚靥。<br />
+花之凋也，雨寒风苦。<br />
+折兮散兮，归土矣哉。</p>
+<h2 id="一个意思说四遍还都是自己不认识的字系列"><a class="header" href="#一个意思说四遍还都是自己不认识的字系列">一个意思说四遍还都是自己不认识的字系列</a></h2>
+<p>斯丘有骠，其鸣萧萧。自子往尔，曷止我寥。<br />
+斯屺有駓，其鸣嘶嘶。自子往尔，曷止我思。<br />
+斯苓有騥，其鸣啾啾。自子往尔，曷止我愁。<br />
+斯崮有騋，其鸣咴咴。自子往尔，曷止我哀。</p>
+<h2 id="醉侯"><a class="header" href="#醉侯">醉侯</a></h2>
+<p>托杜康吾以降兮，兀然未计初度。<br />
+察世事乱无象兮，惟竹林做常客。<br />
+尝王门参军事兮，尚清虚以自治。<br />
+人过余以无为兮，陶然归乎不复思。<br />
+乘斑鹿而反坐兮，车摇摇以为舟。<br />
+喜酒瓮之长盈兮，邀流岚乎共游。<br />
+苟劝余以摄生兮，妇人之言不可听。<br />
+虽重召吾不赴兮，愿袒醉乎万箐。<br />
+中散绝山涛而招怒兮，步兵玄言其至矜。<br />
+俯观万物之扰扰兮，枕糟麴而绝尘。<br />
+历日于朕何有兮，以天地为一朝。<br />
+广厦且易醇醪兮，帝后八荒可巢。<br />
+荷锸随余鹿车兮，死便葬骨山郊。<br />
+日月其自西东兮，蝇营狗苟夫何求？<br />
+虽醉酒而醒世兮，吾将宇天地而忘忧。</p>
+<h2 id="寒塘鹭影"><a class="header" href="#寒塘鹭影">寒塘鹭影</a></h2>
+<p>秋荷零落斜满塘，水映孤月正沧沧。<br />
+秋虫不语鱼潜静，月影带霜水风凉。<br />
+荷间惊起单白鹭，银羽掠波影无痕。<br />
+道是江南冬气微，香樟婆娑隐雪魂。<br />
+影过池空水寂寞，独留栏边对荷人。<br />
+寻踪问荷荷不语，徘徊绕汀自伤神。<br />
+鹭过可有遗踪意？潭静自无留影心。<br />
+月不分照水犹湛，池纵竭涸月不阴。<br />
+鹭影已逝月不住，默对清渊何复吟。</p>
+<h2 id="待归"><a class="header" href="#待归">待归</a></h2>
+<p>书至梦难成，启轩星尚明。<br />
+理庭迎日晓，临镜伴鸡鸣。<br />
+素指掐青葛，甘泉烹细粳。<br />
+晨风吹雨落，疑是扣门声。</p>
+<h2 id="理想四时"><a class="header" href="#理想四时">理想四时</a></h2>
+<h3 id="春"><a class="header" href="#春">春</a></h3>
+<p>轻风斜嫩柳，细雨湿新花。<br />
+午醒拈针罢，随君慢饮茶。</p>
+<h3 id="夏"><a class="header" href="#夏">夏</a></h3>
+<p>寂寂樟荫里，幽幽午漏长。<br />
+案前香篆袅，共览古文章。</p>
+<h3 id="秋"><a class="header" href="#秋">秋</a></h3>
+<p>慢饮雄黄酒，新尝菊下郎。<br />
+天高云自阔，满室桂花香。</p>
+<h3 id="冬"><a class="header" href="#冬">冬</a></h3>
+<p>对雪拥珠被，邻炉话古今。<br />
+半生常碌碌，幸得此知音。</p>
+<h2 id="暗香梦"><a class="header" href="#暗香梦">暗香•梦</a></h2>
+<p>水清天碧，共伊人游取，斜阳春陌。<br />
+广袖暗牵，随步闲移柳风逸。<br />
+空里花飞似雪，瑶池岸、白鸥金鲫。<br />
+却望君、戏匿花阴，笑语正相昵。</p>
+<p>宿昔，漏声寂。<br />
+梦浅见未真，复向何觅。<br />
+月痕易易，遥透窗扉浸寒壁。<br />
+夜尽重衾犹冷，虫声细、空床孤室。<br />
+远道子、相忆否，叫人难臆。  <br><br><br></p>
+<p><font color="#808080"><em>上完课</em>
+<em>不是作业的又开始瞎写了</em></font><br /></p>
+<h2 id="青春"><a class="header" href="#青春">青春</a></h2>
+<p>春日思源池，杏花缀满枝。<br />
+陌上立年少，言行富风姿。<br />
+扶柳柳即醉，观花花自痴。<br />
+爱慕难相隐，情意寄言辞。<br />
+恨君飘飘语，负我切切思。<br />
+临波夜风紧，垂泪星宿移。<br />
+年高晨寤早，窗暗梦来迟。<br />
+当时喜悲事，青春总相宜。</p>
+<h2 id="中秋诗一"><a class="header" href="#中秋诗一">中秋诗一</a></h2>
+<p>十年空抱琴，一朝巧识音。<br />
+共赏千载月，遥寄一片心。</p>
+<h2 id="溜出图书馆并且想摸鱼"><a class="header" href="#溜出图书馆并且想摸鱼">溜出图书馆并且想摸鱼</a></h2>
+<p>书山难觅踪，回马隐葱茏。<br />
+风煦摇枝缓，潭静映荫浓。<br />
+桥影浮滟滟，促织鸣重重。<br />
+蟪蛄此生寄，聊享半夏慵。</p>
+<h2 id="随便翻了一本某地民俗书"><a class="header" href="#随便翻了一本某地民俗书">随便翻了一本某地民俗书</a></h2>
+<p>民俗集志架上藏，信手翻取闲沐阳。<br />
+孺人赏果新婚宴，方士打煞送葬堂。<br />
+龙舞狮飞灯彩盛，插柳食馃春雨祥。<br />
+撷影成书人何在，转头望取天茫茫。</p>
+<h2 id="大晚上在某条河边看云看星星并凑字"><a class="header" href="#大晚上在某条河边看云看星星并凑字">大晚上在某条河边看云看星星并凑字</a></h2>
+<p>流云薄遮月，渌水幽映魂。<br />
+不负秋来意，倚栏自倒樽。</p>
+<h2 id="上中下院的蝴蝶是真好看后两句实在煞风景不读也罢"><a class="header" href="#上中下院的蝴蝶是真好看后两句实在煞风景不读也罢">上中下院的蝴蝶是真好看（后两句实在煞风景不读也罢）</a></h2>
+<p>蝶恋花，绫纹轻纱，九天坠霞。<br />
+蓬莱阁上仙子醉，慵舞嘉嘉。<br />
+翩跹罢，慢饮千红茶。<br />
+朝朝凝露留香久，夜夜临星带蜜浓。<br />
+花新叶卷葱茏，难御冬，霜至何处寻踪？</p>
+<h2 id="想找曹某人玩儿"><a class="header" href="#想找曹某人玩儿">想找曹某人玩儿</a></h2>
+<p>才叹夏永昼长，绿纱窗外夜风凉。<br />
+三日落雨，五日成霜，转眼漫天飞雪狂。<br />
+见雪何悲？彩蝶爰逝花离枝。<br />
+昔日芙蓉嬉笑处，疏疏落雪，寂寞空池。<br />
+见雪何喜？疾踏碎玉归故里。<br />
+海河桥头君我俟，既见君子，云胡不喜？<br />
+携度春夏，轻燕点水留痕，再过秋冬，圆月映雪酒温。<br />
+纵使此身殁，情共文长存。</p>
+<h2 id="半夜很冷还不想学习"><a class="header" href="#半夜很冷还不想学习">半夜很冷还不想学习</a></h2>
+<p>风寒日短，月隐林深。<br />
+孤馆临窗影森森。<br />
+台前细烛，身上薄衿。<br />
+经笥卷卷苦难禁。<br />
+搁笔偶观柳永词，忆当年，更发悲音。<br />
+叹名利二字，一十三画，如何侵古今？<br />
+孜读典籍三千卷，个中几章是知音？<br />
+书自长忿忿，人只暗喑喑。<br />
+为之奈何？再拾笔，仍用心。<br />
+嗟乎！愁怀本无绪，才浅更难吟。  <br><br><br></p>
+<p><font color="#808080"><em>突然想学填词</em></font><br /> </p>
+<h2 id="调笑令"><a class="header" href="#调笑令">调笑令</a></h2>
+<p>长夜，长夜，月映寒波冷榭。<br />
+银河望断幽幽，星星点点宿愁。<br />
+愁宿，愁宿，桃李春风不寿。</p>
+<h2 id="忆秦娥"><a class="header" href="#忆秦娥">忆秦娥</a></h2>
+<p>天君漠，乍横星汉身何托。<br />
+身何托。花颜空对，银河寥落。<br />
+曾期玉指伴君酌，和风起舞霓裳绰。<br />
+霓裳绰。鹊桥难就，月侵寒幕。</p>
+<h2 id="江城子"><a class="header" href="#江城子">江城子</a></h2>
+<p>暮闲捭阖甸前过。<br />
+去年荷，落清波。<br />
+斜阳轻挂，红叶任婆娑。<br />
+旧岁浮桥新媚渚，潭影里，总相和。</p>
+<h2 id="相见欢"><a class="header" href="#相见欢">相见欢</a></h2>
+<p>夜来雨密寒稠，乱枝头。<br />
+点点星星魂断逐波流。<br />
+嫩红软，东风恶，怎堪留。<br />
+犹记莺啼蜂舞浴风柔。</p>
+<h2 id="如梦令"><a class="header" href="#如梦令">如梦令</a></h2>
+<p>长醉柳阴花畔，独坐月凉云散。<br />
+树下影翩翩，恍惚少时初见。<br />
+愁叹，愁叹，回首半生望断。</p>
+<h2 id="清平乐"><a class="header" href="#清平乐">清平乐</a></h2>
+<p>夜长月冷，疏竹摇清影。<br />
+去岁一辞离万岭，今夕玉绳高耿。<br />
+一声铁马寒鸣，千家空室残荆。<br />
+几片从前尺素，倚灯读到天明。</p>
+<h2 id="眼儿媚"><a class="header" href="#眼儿媚">眼儿媚</a></h2>
+<p>银兜轻挂透凝脂，细手散青丝。<br />
+隔窗月下，红绡帐里，新试腰肢。<br />
+浓云连雨坠花枝，夜寂漏声迟。<br />
+趁人熟睡，吞声偷睨，眉眼初知。</p>
+<h2 id="行香子"><a class="header" href="#行香子">行香子</a></h2>
+<p>天色苍苍，日影洸洸。<br />
+春阴里、踏曲徜徉。<br />
+思源湖畔，对柳新妆。<br />
+爱竹风清，花风软，湖风凉。</p>
+<p>远山风至，云阔波长。<br />
+忆当年、沂水泱泱。<br />
+舞雩台上，带曳襟飏。<br />
+渐劳心休，逸心起，自相忘。</p>
+<h2 id="行香子-1"><a class="header" href="#行香子-1">行香子</a></h2>
+<p>嘉果芳醪，翠榭金娇。<br />
+云鬓边、花钿轻描。<br />
+缠绵罗袂，流转笙箫。<br />
+爱笑盈盈，歌浅浅，语娇娇。</p>
+<p>梨园粉黛，椒房红袖。<br />
+转眼间、玉碎花凋。<br />
+客程漫漫，且惜今宵。<br />
+醉画中人，杯中酒，掌中腰。  <br><br><br></p>
+<p><font color="#808080"><em>填不下去了写点别的</em>
+<em>有时能和律有事不能/摊手手</em></font><br /> </p>
+<h2 id="不第"><a class="header" href="#不第">不第</a></h2>
+<p>看花一骑轻尘远，空把桂科勘断肠。<br />
+家隔万山多鸟道，榜悬无姓负萤囊。<br />
+胸中志共斜阳老，心上愁同暮霭茫。<br />
+邻母相逢问饭否，离魂乍敛泪双行。</p>
+<h2 id="雨-1"><a class="header" href="#雨-1">雨</a></h2>
+<p>连月暑蒸城，商羊舒翅鸣。<br />
+九天银汉泻，三界紫龙行。<br />
+漠漠走尘定，萋萋败草荣。<br />
+招风清满手，可濯楚人缨。</p>
+<h2 id="幽游"><a class="header" href="#幽游">幽游</a></h2>
+<p>幽游人寂处，山鸟不闻踪。<br />
+漫饮二泉水，闲依半棵松。<br />
+花摇蜂自懒，风静日还慵。<br />
+林壑虽无酒，可酣云影浓。</p>
+<h2 id="独坐山中"><a class="header" href="#独坐山中">独坐山中</a></h2>
+<p>静坐松清耳，独倾云满杯。<br />
+山深无过访，檐下一层苔。</p>
+<h2 id="嫁实习看到老师的小宝宝在玩耍但我要乖乖做个大人了呜呜"><a class="header" href="#嫁实习看到老师的小宝宝在玩耍但我要乖乖做个大人了呜呜">嫁/实习看到老师的小宝宝在玩耍但我要乖乖做个大人了呜呜</a></h2>
+<p>头上珠簪重，红绸影婆娑。<br />
+彩轿行曳曳，唢呐自高歌。<br />
+车马连十里，一去运几何？<br />
+未见郎君面，只识郎君名。<br />
+媒妁拜父母，言子家显荣。<br />
+再言八字和，婚姻遂得行。<br />
+金翠明珠缀，锦裳细细裁。<br />
+轿前披花马，引颈长咴咴。<br />
+小妹悄声问，几时得再来。<br />
+不知何所答，唯有泪满腮。<br />
+忽忆为人妇，不可复提孩。<br />
+敛容急施粉，正襟理裙裾。<br />
+深深揖膝下，款款登芳舆。<br />
+绣鞭一时举，从此远旧居。<br />
+心中乱无绪，念母前夜言：<br />
+谨慎侍公婆，言行多柔温；<br />
+殷勤待夫婿，琴瑟常怀恩；<br />
+夙夜勤操作，事事少争论；<br />
+明日出门去，不似自家园。<br />
+行行复行行，朱门现道旁。<br />
+轻移莲花入，舅姑坐高堂。<br />
+低眉成三拜，隔巾窥婿郎。<br />
+红袍高冠凛，眉眼见未详。<br />
+绕梁皆笑语，我独意彷徨。<br />
+与子未谋面，将伴成鸳鸯。<br />
+花烛明新室，佳果撒满床。<br />
+相引入红帐，合弹凤求凰。<br />
+露满月犹白，悄起严晨妆。<br />
+妆罢鸟未啼，净手作羹汤。<br />
+姑舅携看毕，谓我行淑良。<br />
+一朝诞人子，贺喜客盈门。<br />
+夫婿行体贴，叔嫂言温存。<br />
+白发双翁媪，夙夜探幼孙。<br />
+荧荧黄金锁，焰焰炭火盆。<br />
+风暖鸟啼软，雪消草已芽。<br />
+春花争烂漫，抱儿戏春蛙。<br />
+小姑五六岁，优游花丛中。<br />
+漫舞轻罗扇，扑蝶双颊红。<br />
+恍惚忆童稚，轻叹散西风。</p>
+<h2 id="鹧鸪天不能出去玩儿哭哭"><a class="header" href="#鹧鸪天不能出去玩儿哭哭">鹧鸪天·不能出去玩儿哭哭</a></h2>
+<p>移花绮阁爱娇姿，金炉香袅沁罗帷。<br />
+绿纱窗隔风沙远，白玉盆听鸟语微。<br />
+叶北落，雁南飞。月凉蝉怨诉声凄。<br />
+未闻蜂蝶枝头闹。萼上花残叶已萎。</p>
+<h2 id="临江仙又开始yy一些很沧桑的画面"><a class="header" href="#临江仙又开始yy一些很沧桑的画面">临江仙·又开始yy一些很沧桑的画面</a></h2>
+<p>渐深树影归林鸟。天色渐晚黄昏。<br />
+野香丰草卧鸡豚，淡烟轻袅绕乡村。<br />
+拙案漫横三碗酒。甲兵烽火追论。<br />
+山醪把盏忆忠魂。如今临月只江痕。</p>
+<h2 id="次韵乐天八月十五日夜湓亭望月军训实在没啥可玩的地上连小石头都没有树叶也都不知道被谁捏碎了"><a class="header" href="#次韵乐天八月十五日夜湓亭望月军训实在没啥可玩的地上连小石头都没有树叶也都不知道被谁捏碎了">次韵乐天八月十五日夜湓亭望月·军训实在没啥可玩的地上连小石头都没有树叶也都不知道被谁捏碎了</a></h2>
+<h3 id="边关将领视角"><a class="header" href="#边关将领视角">边关将领视角</a></h3>
+<p>昔年八月十五夜，凭肩碧柳月桥边。<br />
+今年八月十五夜，横剑黄沙星帐前。<br />
+钟鼓常鸣忧险瘁，婵娟独对羡团圆。<br />
+帘深梦冷实难寐，长挑孤灯忆旧年。</p>
+<h3 id="嫦娥姐姐视角"><a class="header" href="#嫦娥姐姐视角">嫦娥姐姐视角</a></h3>
+<p>昔年八月十五夜，齐眉携手绣窗边。<br />
+今年八月十五夜，愁酒依楹月桂前。<br />
+玉兔声声舂臼冷，病身岁岁羡人圆。<br />
+渐宽衣带渐羸貌，独对婵娟还几年？</p>
+<h3 id="琵琶女视角"><a class="header" href="#琵琶女视角">琵琶女视角</a></h3>
+<p>昔年八月十五夜，华烛娇歌绮宴边。<br />
+今年八月十五夜，清江凄乐蔽舟前。<br />
+常承权贵人空媚，惯看悲欢月自圆。<br />
+夜半春卿携魄去，相期梦里度余年。</p>
+<h2 id="纱窗恨军训小姐姐太漂亮了但我写不出"><a class="header" href="#纱窗恨军训小姐姐太漂亮了但我写不出">纱窗恨·军训小姐姐太漂亮了但我写不出</a></h2>
+<p>流光叶底双黄鸟，作春啼。<br />
+踏花轻舞香纱窈，透娇姿。<br />
+魄随去、暗中相与，<br />
+影过处、遍著芳菲。<br />
+化作诗魂，共春归。</p>
+<h2 id="中秋遥寄二中秋夜对月品友人月饼兼书信有感"><a class="header" href="#中秋遥寄二中秋夜对月品友人月饼兼书信有感">中秋遥寄二/中秋夜对月品友人月饼兼书信有感</a></h2>
+<p>玉轮又对客窗悬，为遣幽思自设筵。<br />
+乍起夜风催暖酒，渐寒月露噤秋蝉。<br />
+酥饴可慰别离苦，尺素能安远道悁。<br />
+千里婵娟同伫望，两心相忆是团圆。</p>
+<h2 id="碌碌我真的好菜想摆了"><a class="header" href="#碌碌我真的好菜想摆了">碌碌/我真的好菜想摆了</a></h2>
+<p>时运久不济，蓬庐空自拊。<br />
+莫如枝头叶，长夏随风舞。</p>
+<h2 id="封校不能出门儿次杜少陵登楼韵"><a class="header" href="#封校不能出门儿次杜少陵登楼韵">封校不能出门儿次杜少陵登楼韵</a></h2>
+<p>一树春兴两地心，曾期芳日共登临。<br />
+花香草软盈天地，湖阔风清自古今。<br />
+沪上凌寒才欲去，江南蛊毒又相侵。<br />
+夜长难寐空思远，窗下拥衾对月吟。</p>
+<h2 id="去植物园荡秋千"><a class="header" href="#去植物园荡秋千">去植物园荡秋千</a></h2>
+<p>秋晴追好景，花荫转石桥。<br />
+漫横秋千上，风起影摇摇。  <br><br><br></p>
+<p><font color="#808080"><em>人在法国没有那个气氛技术都大不如前了</em><br />
+<em>给没有勤加练习找借口.jpg</em></font><br /> </p>
+<h2 id="白天上课听不懂晚上很emo翻翻红楼随便次下雨村某诗"><a class="header" href="#白天上课听不懂晚上很emo翻翻红楼随便次下雨村某诗">白天上课听不懂晚上很emo翻翻红楼随便次下雨村某诗</a></h2>
+<p>离乡原寂寞，月冷更生愁。<br />
+餐敝常枵腹，书迂易白头。<br />
+同师多异道，归径少朋俦。<br />
+夜半收残蜡，清寒上小楼。</p>
+<h2 id="吃了个橘子"><a class="header" href="#吃了个橘子">吃了个橘子</a></h2>
+<p>草草岁将末，幽幽生暮凉。<br />
+客窗闻鸟度，小塌对斜阳。<br />
+漫趁闲情惬，欣尝橘子香。<br />
+易寻滋味果，难得好时光。</p>
+<p><font color="#808080"><em>最近常常过得混沌，看了“julie&amp;julia”，总觉得也要找点什么事情来支撑自己的生活了</em><br />
+<em>这些年体会下来，我大概总不是个爱热闹的人，渐渐觉得也不必太逼迫自己了吧</em><br />
+<em>真正觉得心里喜欢的，无非“在没人打扰的厨房，随着性子尝试食材和烹饪方法的组合”“在不太挤的泳池，运动自己的身体，借着水的力气漂动”“有充足的时间，选出喜欢的字，组成漂亮的句子”</em><br />
+<em>这份“说明”，已经在备忘录里存了三年多时间，想想大概还是“那个暑假”翻到的，我想试试</em><br />
+<em>打下这行字，就像julie似的，壮志满满的，但又不知道会走到哪一步</em></font><br /> </p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../poem/poem.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../poem/poemGuideline.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../poem/poem.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../poem/poemGuideline.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
