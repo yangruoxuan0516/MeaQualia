@@ -1,0 +1,6 @@
+[book]
+authors = ["ruox"]
+language = "en"
+multilingual = false
+src = "src"
+title = "MyDiary"
