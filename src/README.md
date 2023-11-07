@@ -1,3 +1,2 @@
 # Little notice:
-# Everything here is about my ego.
-# Enjoy yourself or leave me alone.
+# Everything here is about me.
