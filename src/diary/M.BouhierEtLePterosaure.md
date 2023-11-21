@@ -1,5 +1,3 @@
-Monsieur Bouhier et le ptérosaure
-
 Un samedi, quand je naviguais sur internet, j’ai rencontré un modèle de pterosaure sur le site de YouMagine et je me suis dit « je dois l’avoir ! »
 Je suis une telle personne que quand je sens de l’intérieur que quand je veux quelque chose, je cherche à l’obtenir, sinon je n’essaie même pas.
 
