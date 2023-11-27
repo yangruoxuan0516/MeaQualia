@@ -43,3 +43,4 @@ git push -u origin main --force
     - [窗外一只鸟飞过](./diary/窗外一只鸟飞过.md)
     - [Monsieur Bouhier et le ptérosaure](./diary/M.BouhierEtLePterosaure.md)
     - [我的屋子、我的地毯](./diary/我的屋子、我的地毯.md)
+    - [在法国剁手pdd](./diary/在法国剁手pdd.md)
