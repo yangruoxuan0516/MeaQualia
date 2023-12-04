@@ -44,3 +44,4 @@ git push -u origin main --force
     - [Monsieur Bouhier et le ptérosaure](./diary/M.BouhierEtLePterosaure.md)
     - [我的屋子、我的地毯](./diary/我的屋子、我的地毯.md)
     - [在法国剁手pdd](./diary/在法国剁手pdd.md)
+    - [如果哪天我去vipassana，那么这就是开端](./diary/如果哪天我去vipassana，那么这就是开端.md)
