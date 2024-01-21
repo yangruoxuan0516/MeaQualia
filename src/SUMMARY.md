@@ -50,7 +50,9 @@ git push -u origin main --force
     - [在泳池底看星和极光](./diary/在泳池底看星和极光.md)
     - [像anne一样幻想](./diary/像anne一样幻想.md)
     - [slavmarket](./diary/slavmarket.md)
-    <!-- - [some secret gloomy thoughts](./diary/somesecretgloomythoughts.md) -->
     - [beauty filter over the past](./diary/beautyfilteroverthepast.md)
-    <!-- - [to live by the heart shape bay and oldest trees of california](./diary/tolivebytheheartshapebayandoldesttreesofcalifornia.md) -->
     - [rdv avec joris](./diary/rdvavecjoris.md)
+
+
+    <!-- - [some secret gloomy thoughts](./diary/somesecretgloomythoughts.md) -->
+    <!-- - [to live by the heart shape bay and oldest trees of california](./diary/tolivebytheheartshapebayandoldesttreesofcalifornia.md) -->
