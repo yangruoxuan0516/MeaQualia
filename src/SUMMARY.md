@@ -19,8 +19,8 @@ git push -u origin main --force
 [Bienvenu! Bienvenue!](./README.md)
 - [诗啊](./poem/poem.md)
     - [一些习作](./poem/mypoem.md)
-    - [一个教程](./poem/poemGuideline.md)
-       - [Part1](./poem/poemPart1.md)
+    <!-- - [一个教程](./poem/poemGuideline.md)
+       - [Part1](./poem/poemPart1.md) -->
 - [我的日记](./diary/0.md)
     - [放假回家和废话产出计划](./diary/放假回家和废话产出计划.md)
     - [美丽的人、风和水煮胡萝卜](./diary/美丽的人、风和水煮胡萝卜.md)
