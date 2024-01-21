@@ -1,0 +1,9 @@
+Marilla says that she cried because she "was wishing Anne could have stayed a little girl, even with all her queer ways". I do believe that she meant it the moment she said it, but I also know that she wouldn't have agreed with it when Anne was a little girl "with all her queer ways".
+
+We always put beauty filter over the past. Before I went back to my host family in Italy after five years, I recalled that the life there was perfect. Well, they obviously had not been, at least not everyday as I thought. And when I actually re-expericed the old golden days and tried to bring back that perfect feeling which actually only existed in my imaginary, I realized that what I had been longing for was just a "soap bubble".
+
+I did have good time, like the warm sunny afternoons I went up to the top of the hill and sit between the small yellow flowers with my friend Jesus without a word... But when I read the captions of my old instagram posts, I remembered the frequent and desperate scrupulousness, inability and solitude. 
+
+I have been checking out the old photos. I did have had many happy moments in my life, yet between those moments there existed ordinary even dull periods of life as well. I do believe that how we feel about life depend on how we see it, and it is definitely a nice thing to be positive all the time, but still, I just can't be like Anne.
+
+Sometimes when I see other people's posts on social media, especially when they have big smiles on their faces, I wonder if they were really so happy as they looks, or if they happiness can last as the that in the photos. Nevertheless, I have also learned to put a big smile on my face when I am confronted with a camera.

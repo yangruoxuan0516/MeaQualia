@@ -45,7 +45,12 @@ git push -u origin main --force
     - [我的屋子、我的地毯](./diary/我的屋子、我的地毯.md)
     - [在法国剁手pdd](./diary/在法国剁手pdd.md)
     - [如果哪天我去vipassana，那么这就是开端](./diary/如果哪天我去vipassana，那么这就是开端.md)
+    - [parrainage TODO](./diary/parrainage.md)
     - [Village Français](./diary/villagefrançais.md)
     - [在泳池底看星和极光](./diary/在泳池底看星和极光.md)
     - [像anne一样幻想](./diary/像anne一样幻想.md)
     - [slavmarket](./diary/slavmarket.md)
+    <!-- - [some secret gloomy thoughts](./diary/somesecretgloomythoughts.md) -->
+    - [beauty filter over the past](./diary/beautyfilteroverthepast.md)
+    <!-- - [to live by the heart shape bay and oldest trees of california](./diary/tolivebytheheartshapebayandoldesttreesofcalifornia.md) -->
+    - [rdv avec joris](./diary/rdvavecjoris.md)
