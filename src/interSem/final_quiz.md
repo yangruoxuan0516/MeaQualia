@@ -36,7 +36,7 @@ avec
 alors la longeur du coté d'un carré est \\(25m\\).
 
 ## La position des carrés
-Les franges sont verticales alors les carrés sont positionnés horizontalement, et leurs centres sont séparés de \\(333m\\).
+Les franges sont verticales alors les carrés sont positionnés horizontalement, et leurs centres sont séparés de \\(333m\\). Ceci est calculé de la même manière que la longeur du coté d'un carré, avec \\(n\\) = \\(3\\).
 
 Je ne sais pas trop comment traiter le déphasage, mais on voit dans le ift qu'un carré et au centre et l'autre est décalé de lui d'une distance de \\(333m\\) horizontalement...
 
