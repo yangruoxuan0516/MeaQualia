@@ -1,5 +1,5 @@
 ## C'est comment le filtre ?
-Pour identifier ce filtre, j'ai utilisé comme le donné un dirac au centre d'une figure de \\(1000\times 1000\\), avec \\(sampling\space step = 1\cdot 10^{-9}\\), et j'ai obtenu le résultat suivant:
+Pour identifier ce filtre, j'ai utilisé comme la donné un dirac au centre d'une figure de \\(1000\times 1000\\), avec \\(sampling\space step = 1\cdot 10^{-9}\\), et j'ai obtenu le résultat suivant:
 
 ![](../2d.png)
 
@@ -9,15 +9,15 @@ Si on zoom, on voit:
 
 où l'enveloppe est la diffraction d'un carré, mais il est multiplié par des franges qui semblent à la fente de Young.
 
-Si c'était le cas, l'ouverture est la convolution entre un carré et deux point, qui donne deux carrés.
+Si c'est le cas, l'ouverture sera la convolution entre un carré et deux points, ce qui donne deux carrés.
 
-On fait un transformé de Fourier inverse pour vérifier cette hypothèse, qui donne:
+On fait un transformé de Fourier inverse pour vérifier cette hypothèse, il donne:
 
 ![](../ift.png)
 
 on a bien deviné :3
 
-On observe aussi qu'ils ne sont pas au centre, ce qui donne un déphasage invisible en densité.
+On observe aussi que les carrés ne sont pas au centre, ce qui donne un déphasage invisible en densité.
 
 
 ## La taille des carrés
@@ -36,8 +36,8 @@ avec
 alors la longeur du coté d'un carré est \\(25m\\).
 
 ## La position des carrés
-Les franges sont verticaux alors les carrés sont positionnés horizontalement, et leurs centres sont séparés de \\(333m\\).
+Les franges sont verticales alors les carrés sont positionnés horizontalement, et leurs centres sont séparés de \\(333m\\).
 
-Je sais pas trop comment traiter le déphasage, mais on voit dans le ift qu'un carré et au centre et l'autre est décalé de lui d'une distance de \\(333m\\) horizontalement...
+Je ne sais pas trop comment traiter le déphasage, mais on voit dans le ift qu'un carré et au centre et l'autre est décalé de lui d'une distance de \\(333m\\) horizontalement...
 
 
