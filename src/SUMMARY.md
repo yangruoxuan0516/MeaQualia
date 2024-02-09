@@ -42,7 +42,7 @@ git push -u origin main --force
     - [什么戏剧旅行、什么戏剧盲盒、什么戏剧生活](./diary/什么戏剧旅行、什么戏剧盲盒、什么戏剧生活.md)
     - [活着干嘛](./diary/活着干嘛.md)
     - [窗外一只鸟飞过](./diary/窗外一只鸟飞过.md)
-    - [Monsieur Bouhier et le ptérosaure](./diary/M.BouhierEtLePterosaure.md)
+    - [le ptérosaure](./diary/M.BouhierEtLePterosaure.md)
     - [我的屋子、我的地毯](./diary/我的屋子、我的地毯.md)
     - [在法国剁手pdd](./diary/在法国剁手pdd.md)
     - [如果哪天我去vipassana，那么这就是开端](./diary/如果哪天我去vipassana，那么这就是开端.md)
