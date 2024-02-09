@@ -1,5 +1,5 @@
 ## C'est comment le filtre ?
-Pour identifier ce filtre, j'ai utilisé comme le donné un dirac au centre d'une figure de $1000\times 1000$, avec $sampling\space step = 1e-09$, et j'ai obtenu le résultat suivant:
+Pour identifier ce filtre, j'ai utilisé comme le donné un dirac au centre d'une figure de \\(1000\times 1000\\), avec \\(sampling\space step = 1\cdot 10^{-9}\\), et j'ai obtenu le résultat suivant:
 
 ![](../2d.png)
 
@@ -21,11 +21,23 @@ On observe aussi qu'ils ne sont pas au centre, ce qui donne un déphasage invisi
 
 
 ## La taille des carrés
-D'après le cours, on peut calculer la longeur du coté d'un carré par $$\frac{2\lambda}{n\theta}$$, avec $\lambda$ = longeur d'onde de la lumière, $n$ = nombre de pixel de la diffraction et $\theta$ = sampling step, alors ici on a $25m$.
+D'après le cours, on peut calculer la longeur du coté d'un carré par \\[\frac{2\lambda}{n\theta}\\]
+
+avec 
+
+\\(\lambda \\) = longeur d'onde de la lumière = \\(0.5 \cdot 10^{-6}m\\), 
+
+\\(n\\) = nombre de pixel de la diffraction = \\(40\\),
+
+\\(\theta\\) = sampling step = \\(1\cdot 10^{-9}\\),
+
+\\[A.N. \space \frac{2 \cdot 0.5 \cdot 10^{-6}}{40\cdot 1\cdot 10^{-9}} = 25m\\]
+
+alors la longeur du coté d'un carré est \\(25m\\).
 
 ## La position des carrés
-Les franges sont verticaux alors les carrés sont positionnés horizontalement, et leurs centres sont séparés de $333m$.
+Les franges sont verticaux alors les carrés sont positionnés horizontalement, et leurs centres sont séparés de \\(333m\\).
 
-Je sais pas trop comment traiter le déphasage, mais on voit dans le ift qu'un carré et au centre et l'autre est décalé de lui d'une distance de $333m$ horizontalement...
+Je sais pas trop comment traiter le déphasage, mais on voit dans le ift qu'un carré et au centre et l'autre est décalé de lui d'une distance de \\(333m\\) horizontalement...
 
 

@@ -4,3 +4,5 @@ language = "en"
 multilingual = true
 src = "src"
 title = "meaQualia"
+[output.html]
+mathjax-support = true
