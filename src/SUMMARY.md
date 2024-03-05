@@ -8,7 +8,7 @@ git init
 git add .
 git commit -m "init"
 
-git remote add origin https://github.com/yangruoxuan0516/MyEgo.git
+git remote add origin https://github.com/yangruoxuan0516/MeaQualia.git
 git branch -M main
 git push -u origin main
 
@@ -53,6 +53,8 @@ git push -u origin main --force
     - [slavmarket](./diary/slavmarket.md)
     - [beauty filter over the past](./diary/beautyfilteroverthepast.md)
     - [rdv avec joris](./diary/rdvavecjoris.md)
+    - [Festiv'art](./diary/Festiv'art.md)
+    - [Espagna](./diary/espagna.md)
 
     <!-- - [some secret gloomy thoughts](./diary/somesecretgloomythoughts.md) -->
     <!-- - [to live by the heart shape bay and oldest trees of california](./diary/tolivebytheheartshapebayandoldesttreesofcalifornia.md) -->
