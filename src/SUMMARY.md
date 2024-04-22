@@ -55,6 +55,7 @@ git push -u origin main --force
     - [rdv avec joris](./diary/rdvavecjoris.md)
     - [Festiv'art](./diary/Festiv'art.md)
     - [Espagna](./diary/espagna.md)
+    - [斥树](./diary/斥树.md)
 
     <!-- - [some secret gloomy thoughts](./diary/somesecretgloomythoughts.md) -->
     <!-- - [to live by the heart shape bay and oldest trees of california](./diary/tolivebytheheartshapebayandoldesttreesofcalifornia.md) -->
