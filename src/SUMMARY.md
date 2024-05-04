@@ -56,6 +56,7 @@ git push -u origin main --force
     - [Festiv'art](./diary/Festiv'art.md)
     - [Espagna](./diary/espagna.md)
     - [斥树](./diary/斥树.md)
+    - [下雨了！](./diary/下雨了！.md)
 
     <!-- - [some secret gloomy thoughts](./diary/somesecretgloomythoughts.md) -->
     <!-- - [to live by the heart shape bay and oldest trees of california](./diary/tolivebytheheartshapebayandoldesttreesofcalifornia.md) -->
