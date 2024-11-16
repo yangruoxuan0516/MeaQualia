@@ -53,7 +53,7 @@ git push -u origin main --force
     - [slavmarket](./diary/slavmarket.md)
     - [beauty filter over the past](./diary/beautyfilteroverthepast.md)
     - [rdv avec joris](./diary/rdvavecjoris.md)
-    - [Festiv'art](./diary/Festiv'art.md)
+    - [Festiv'art](./diary/Festivart.md)
     - [Espagna](./diary/espagna.md)
     - [斥树](./diary/斥树.md)
     - [下雨了！](./diary/下雨了！.md)
