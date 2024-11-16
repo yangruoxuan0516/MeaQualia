@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="light" dir="ltr">
+<html lang="en" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -33,15 +33,17 @@
 
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -63,19 +65,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -85,45 +84,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Bienvenu! Bienvenue!</a></li><li class="chapter-item expanded "><a href="poem/0.html"><strong aria-hidden="true">1.</strong> 诗啊</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="poem/mypoem.html"><strong aria-hidden="true">1.1.</strong> 一些习作</a></li></ol></li><li class="chapter-item expanded "><a href="diary/0.html"><strong aria-hidden="true">2.</strong> 我的日记</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="diary/放假回家和废话产出计划.html"><strong aria-hidden="true">2.1.</strong> 放假回家和废话产出计划</a></li><li class="chapter-item expanded "><a href="diary/美丽的人、风和水煮胡萝卜.html"><strong aria-hidden="true">2.2.</strong> 美丽的人、风和水煮胡萝卜</a></li><li class="chapter-item expanded "><a href="diary/第一次见到小家伙.html"><strong aria-hidden="true">2.3.</strong> 第一次见到小家伙</a></li><li class="chapter-item expanded "><a href="diary/月嫂阿姨在做饭.html"><strong aria-hidden="true">2.4.</strong> 月嫂阿姨在做饭</a></li><li class="chapter-item expanded "><a href="diary/一些广场舞经历.html"><strong aria-hidden="true">2.5.</strong> 一些广场舞经历</a></li><li class="chapter-item expanded "><a href="diary/爸爸小时候天上有很多星星.html"><strong aria-hidden="true">2.6.</strong> 爸爸小时候天上有很多星星</a></li><li class="chapter-item expanded "><a href="diary/水库！我跳进水库！.html"><strong aria-hidden="true">2.7.</strong> 水库！我跳进水库！</a></li><li class="chapter-item expanded "><a href="diary/一些可以跨越时间的关系.html"><strong aria-hidden="true">2.8.</strong> 一些可以跨越时间的关系</a></li><li class="chapter-item expanded "><a href="diary/标签意味着长大吗.html"><strong aria-hidden="true">2.9.</strong> 标签意味着长大吗</a></li><li class="chapter-item expanded "><a href="diary/非常非常非常难过.html"><strong aria-hidden="true">2.10.</strong> 非常非常非常难过</a></li><li class="chapter-item expanded "><a href="diary/偷闲、红樱桃月饼、人和开集.html"><strong aria-hidden="true">2.11.</strong> 偷闲、红樱桃月饼、人和开集</a></li><li class="chapter-item expanded "><a href="diary/电磁学基础的浪漫——我看向远方的时候在想什么？.html"><strong aria-hidden="true">2.12.</strong> 电磁学基础的浪漫——我看向远方的时候在想什么？</a></li><li class="chapter-item expanded "><a href="diary/这首歌让我想起我也曾生活.html"><strong aria-hidden="true">2.13.</strong> 这首歌让我想起我也曾生活</a></li><li class="chapter-item expanded "><a href="diary/花钱好开心.html"><strong aria-hidden="true">2.14.</strong> 花钱好开心</a></li><li class="chapter-item expanded "><a href="diary/WEI-野蛮地生活.html"><strong aria-hidden="true">2.15.</strong> WEI-野蛮地生活</a></li><li class="chapter-item expanded "><a href="diary/和妈妈打电话好开心.html"><strong aria-hidden="true">2.16.</strong> 和妈妈打电话好开心</a></li><li class="chapter-item expanded "><a href="diary/什么戏剧旅行、什么戏剧盲盒、什么戏剧生活.html"><strong aria-hidden="true">2.17.</strong> 什么戏剧旅行、什么戏剧盲盒、什么戏剧生活</a></li><li class="chapter-item expanded "><a href="diary/活着干嘛.html"><strong aria-hidden="true">2.18.</strong> 活着干嘛</a></li><li class="chapter-item expanded "><a href="diary/窗外一只鸟飞过.html"><strong aria-hidden="true">2.19.</strong> 窗外一只鸟飞过</a></li><li class="chapter-item expanded "><a href="diary/M.BouhierEtLePterosaure.html"><strong aria-hidden="true">2.20.</strong> le ptérosaure</a></li><li class="chapter-item expanded "><a href="diary/我的屋子、我的地毯.html"><strong aria-hidden="true">2.21.</strong> 我的屋子、我的地毯</a></li><li class="chapter-item expanded "><a href="diary/在法国剁手pdd.html"><strong aria-hidden="true">2.22.</strong> 在法国剁手pdd</a></li><li class="chapter-item expanded "><a href="diary/如果哪天我去vipassana，那么这就是开端.html"><strong aria-hidden="true">2.23.</strong> 如果哪天我去vipassana，那么这就是开端</a></li><li class="chapter-item expanded "><a href="diary/parrainage.html"><strong aria-hidden="true">2.24.</strong> parrainage TODO</a></li><li class="chapter-item expanded "><a href="diary/villagefrançais.html"><strong aria-hidden="true">2.25.</strong> Village Français</a></li><li class="chapter-item expanded "><a href="diary/在泳池底看星和极光.html"><strong aria-hidden="true">2.26.</strong> 在泳池底看星和极光</a></li><li class="chapter-item expanded "><a href="diary/像anne一样幻想.html"><strong aria-hidden="true">2.27.</strong> 像anne一样幻想</a></li><li class="chapter-item expanded "><a href="diary/slavmarket.html"><strong aria-hidden="true">2.28.</strong> slavmarket</a></li><li class="chapter-item expanded "><a href="diary/beautyfilteroverthepast.html"><strong aria-hidden="true">2.29.</strong> beauty filter over the past</a></li><li class="chapter-item expanded "><a href="diary/rdvavecjoris.html"><strong aria-hidden="true">2.30.</strong> rdv avec joris</a></li><li class="chapter-item expanded "><a href="diary/Festiv'art.html"><strong aria-hidden="true">2.31.</strong> Festiv'art</a></li><li class="chapter-item expanded "><a href="diary/espagna.html"><strong aria-hidden="true">2.32.</strong> Espagna</a></li><li class="chapter-item expanded "><a href="diary/斥树.html"><strong aria-hidden="true">2.33.</strong> 斥树</a></li><li class="chapter-item expanded "><a href="diary/下雨了！.html"><strong aria-hidden="true">2.34.</strong> 下雨了！</a></li><li class="chapter-item expanded "><a href="diary/厨房墙上的瓷砖.html"><strong aria-hidden="true">2.35.</strong> 厨房墙上的瓷砖</a></li><li class="chapter-item expanded "><a href="diary/等一辆陌生的公交车.html"><strong aria-hidden="true">2.36.</strong> 等一辆陌生的公交车</a></li><li class="chapter-item expanded "><a href="diary/买了一个法拉费.html"><strong aria-hidden="true">2.37.</strong> 买了一个法拉费</a></li><li class="chapter-item expanded "><a href="diary/chevrerieDeLily.html"><strong aria-hidden="true">2.38.</strong> Chevrerie De Lily</a></li></ol></li><li class="chapter-item expanded "><a href="commentaire/0.html"><strong aria-hidden="true">3.</strong> 读书弹幕</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commentaire/sltbyc.html"><strong aria-hidden="true">3.1.</strong> 诗里特别有禅</a></li><li class="chapter-item expanded "><a href="commentaire/yn.html"><strong aria-hidden="true">3.2.</strong> 厌女</a></li></ol></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -1023,6 +1002,16 @@ Lily也来了，她说我不是👎，不是moyen，而是👍；说既然接受
 <p>也许是Simona（私下里我打算一直这么叫她下去了）的原因，我对短头发的女同性恋有种某名的、普遍的、隐秘的好感。<br />
 但Anaïs实在是一个很有魅力的人，我是说她选择自己人生的勇气：成绩优异、法律专业、毕业后做律师，在法国人的普世价值观里绝对是精英了，但她不喜欢自己的工作（我问她一开始为什么选法律，她说因为当时成绩不错，像极了我这些年的心路历程），辞职去奶酪店买奶酪，又经店主推荐到Lily家做wwoofing，最后留在了村子里，给有需要的农场干活。<br />
 我呢？</p>
+<div style="break-before: page; page-break-before: always;"></div><p><font color="#808080"><em>到了一定年纪，对生活再不能创造出新的印象了，只剩下不断向童年探寻，用那些相似的片段，拼出对当下的阐释。</em></font><br></p>
+<p>巴黎的冬天天亮得很晚，就算改到冬令时，起床时窗外的天空也只是从遥远的地方显得微微发白，像是只兑了一点牛奶的咖啡。</p>
+<p>周一早晨舍友都没有课，如果我尽量轻轻地走过狭窄过道里有点松动的木地板，而不发出过多噪声的话，大概就不至于惊醒某个人的好梦。这种时候，四下安静，一片漆黑，感觉这幢楼里无数人的梦交织在我周围，我在梦的漩涡里游走。</p>
+<p>童年的回忆是在这样一个时刻击中我的：我开了厨房的灯喝水，转身走进浴室，我没有开灯——我不喜欢太多的光亮太快地冲醒我刚刚苏醒的意识——厨房的光于是远远地透进来，让洗手池啊、四散着的牙刷和洗面奶啊、横七竖八的肥皂盒啊，被轻轻照亮，在一片深深浅浅的灰黑中透露出一点它们本来的颜色。</p>
+<p>我突然想起小时候要上学的清晨。</p>
+<p>小时候是个太笼统的概念，我说小时候，是因为我实际记不清是什么时候了，用理性推断一下，大概是9到12岁之间，因为似乎是三年级才搬去蓝海苑，而初中就开始住校了，但这些可以用客观的词汇表达的时间信息也不是从当时的印象里得来的，而是后来向妈妈求证过的。对小时候的主观回忆混沌地缠在一起，一个清晨重叠着另一个清晨，一个冬天交织着另一个冬天。</p>
+<p>那时候要上学的早晨是这样的：......</p>
+<p>不，其实我并不记得，我所回忆起的只是一点零碎的场景，而且就算这点记忆，恐怕也被时光的流逝打磨得和它原本的样子相去甚远。</p>
+<p>但不管怎样，我想起这样的场景：我打开窗头一盏台灯，把亮度调到最暗，让美梦和被窝交织成的柔软国度不至消失得太快，把头埋进被子里，享受最后一刻的温暖和柔软；是从厨房里，但又好像从很远的地方，传来豆浆机的嗡嗡声，我走去浴室洗脸，客厅在黑暗里显出无边的宽阔，厨房的光亮在木地板上蔓延过来，像太阳光在宇宙中经历8分钟才到达地球那样缓慢；是妈妈在厨房做饭，这是推理，不是印象，我的印象到此为止。（我甚至不记得当时每天早晨吃什么，我问妈妈，她也不记得，看来是遗传.....）</p>
+<p>记下来之后，觉得自己荒唐，两个场景的相似之处可能只在于：半睡半醒时分，远处投来一束昏暗的光。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="读书弹幕"><a class="header" href="#读书弹幕">读书弹幕</a></h1>
 <p>是说我看书时脑子里飘过的东西</p>
 <p>写不成文</p>
@@ -1048,6 +1037,7 @@ Lily也来了，她说我不是👎，不是moyen，而是👍；说既然接受
 <h3 id=""><a class="header" href="#"></a></h3>
 <p><em>萨义德将“东方主义”简明地定义为“关于何为东方的西方世界的知识体系”。“东方主义”，就是关于东方是什么、应该是什么、希望它是什么的西洋人的幻想的别名。因此，无论知道了多少东方主义，对真正的“东方”还是一无所知，知道的不过是西洋人头脑中的东方。最脍炙人口的“东方女人”，应该是普契尼的歌剧《蝴蝶夫人》中的女主人公。对，在东方主义的视野中，日本就是被表象为“蝴蝶夫人”。用现在的话来说，蝴蝶夫人就是单身赴任的驻外人员的当地妻子，她的情人接到本国的调令后把她体面地抛弃了，但这个不甘死心却又软弱无力的女人，日复一日望着大海，沉溺于“在一个晴朗的日子你一定会来接我”的幻想之中，无需赘言，这个幻想，不是蝴蝶夫人脑子中的幻想，而是创作出蝴蝶夫人这一形象的普契尼的脑子中的幻想。对于西方男人，没有比这更舒适方便的幻想了。对方是不能理解的他者，这意味着，那既是充满迷幻魅力的快乐之源，又是不会给自己带来丝毫威胁的完全无力的存在，对方不但作为诱惑者主动委身，还在自己离去之后毫无怨恨地继续爱慕自己。对“被我抛弃的那个女人”所怀有的一点点心痛的感觉，也因女人的爱的伟大而得到净化。还有比这更能满足西方男人自尊心的故事吗？质疑“那种女人怎么可能有”的声音，被西方人的巨大幻想所淹没，没人听见。东方主义就是让支配集团不去面对他者现实的装置，所以，无论如何陈述“日本女人其实是这样的”，这种声音也传不到他们的耳朵里。用更低俗的话说，东方主义就是西方男人的自慰品，我真弄不懂看到这种自慰品还拍手喝彩的日本观众的心思。我一看到《蝴蝶夫人》就作呕，根本没法心平气和地看下去。</em></p>
 <p>诗词中写与歌女的情谊，大概常常也只是如此。不好说那一瞬间的情感是真是假，但大部分都是感动自己罢了，所谓“当他写自己深深地爱上了那个歌女，其实他是深深地爱上了自己”。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="佛教与现代心理学"><a class="header" href="#佛教与现代心理学">佛教与现代心理学</a></h1>
 
                     </main>
 
