@@ -61,10 +61,11 @@ git push -u origin main --force
     - [等一辆陌生的公交车](./diary/等一辆陌生的公交车.md)
     - [买了一个法拉费](./diary/买了一个法拉费.md)
     - [Chevrerie De Lily](./diary/chevrerieDeLily.md)
+    - [一个要上学的清晨](./diary/一个要上学的清晨.md)
 
-    <!-- - [some secret gloomy thoughts](./diary/somesecretgloomythoughts.md) -->
     <!-- - [to live by the heart shape bay and oldest trees of california](./diary/tolivebytheheartshapebayandoldesttreesofcalifornia.md) -->
 
-- [读书弹幕](./commentaire/0.md)
+- [弹幕](./commentaire/0.md)
     - [诗里特别有禅](./commentaire/sltbyc.md)
     - [厌女](./commentaire/yn.md)
+    - [佛教与现代心理学](./commentaire/fjyxdxlx.md)
