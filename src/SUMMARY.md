@@ -30,29 +30,30 @@ git push -u origin main --force
     - [一些广场舞经历](./diary/一些广场舞经历.md)
     - [爸爸小时候天上有很多星星](./diary/爸爸小时候天上有很多星星.md)
     - [水库！我跳进水库！](./diary/水库！我跳进水库！.md)
-    - [一些可以跨越时间的关系](./diary/一些可以跨越时间的关系.md)
+    <!-- - [一些可以跨越时间的关系](./diary/一些可以跨越时间的关系.md) -->
     - [标签意味着长大吗](./diary/标签意味着长大吗.md)
-    - [非常非常非常难过](./diary/非常非常非常难过.md)
+    <!-- - [非常非常非常难过](./diary/非常非常非常难过.md) -->
     - [偷闲、红樱桃月饼、人和开集](./diary/偷闲、红樱桃月饼、人和开集.md)
     - [电磁学基础的浪漫——我看向远方的时候在想什么？](./diary/电磁学基础的浪漫——我看向远方的时候在想什么？.md)
     - [这首歌让我想起我也曾生活](./diary/这首歌让我想起我也曾生活.md)
     - [花钱好开心](./diary/花钱好开心.md)
     - [WEI-野蛮地生活](./diary/WEI-野蛮地生活.md)
     - [和妈妈打电话好开心](./diary/和妈妈打电话好开心.md)
-    - [什么戏剧旅行、什么戏剧盲盒、什么戏剧生活](./diary/什么戏剧旅行、什么戏剧盲盒、什么戏剧生活.md)
-    - [活着干嘛](./diary/活着干嘛.md)
+    <!-- - [什么戏剧旅行、什么戏剧盲盒、什么戏剧生活](./diary/什么戏剧旅行、什么戏剧盲盒、什么戏剧生活.md) -->
+    <!-- - [活着干嘛](./diary/活着干嘛.md) -->
     - [窗外一只鸟飞过](./diary/窗外一只鸟飞过.md)
     - [le ptérosaure](./diary/M.BouhierEtLePterosaure.md)
     - [我的屋子、我的地毯](./diary/我的屋子、我的地毯.md)
-    - [在法国剁手pdd](./diary/在法国剁手pdd.md)
+    <!-- - [在法国剁手pdd](./diary/在法国剁手pdd.md) -->
     - [如果哪天我去vipassana，那么这就是开端](./diary/如果哪天我去vipassana，那么这就是开端.md)
-    - [parrainage TODO](./diary/parrainage.md)
-    - [Village Français](./diary/villagefrançais.md)
+    <!-- - [parrainage TODO](./diary/parrainage.md) -->
+    <!-- - [Village Français](./diary/villagefrançais.md) -->
     - [在泳池底看星和极光](./diary/在泳池底看星和极光.md)
     - [像anne一样幻想](./diary/像anne一样幻想.md)
     - [slavmarket](./diary/slavmarket.md)
     - [beauty filter over the past](./diary/beautyfilteroverthepast.md)
-    - [rdv avec joris](./diary/rdvavecjoris.md)
+    <!-- - [to live by the heart shape bay and oldest trees of california](./diary/tolivebytheheartshapebayandoldesttreesofcalifornia.md) -->
+    <!-- - [rdv avec joris](./diary/rdvavecjoris.md) -->
     - [Festiv'art](./diary/Festivart.md)
     - [Espagna](./diary/espagna.md)
     - [斥树](./diary/斥树.md)
@@ -63,7 +64,7 @@ git push -u origin main --force
     - [Chevrerie De Lily](./diary/chevrerieDeLily.md)
     - [一个要上学的清晨](./diary/一个要上学的清晨.md)
 
-    <!-- - [to live by the heart shape bay and oldest trees of california](./diary/tolivebytheheartshapebayandoldesttreesofcalifornia.md) -->
+
 
 - [弹幕](./commentaire/0.md)
     - [诗里特别有禅](./commentaire/sltbyc.md)
