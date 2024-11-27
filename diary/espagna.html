@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Espagna - meaQualia</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">meaQualia</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="突发奇想的独自行动"><a class="header" href="#突发奇想的独自行动">突发奇想的独自行动</a></h2>
+<p>[TODO]关于我背着1kg牛奶在公园小山的树丛里爬，之后去意外约到的casa vicens听讲解，最后带着gaudi传记、一块mató和一罐蜂蜜回家的故事</p>
+<h2 id="在马德里某公园遛弯"><a class="header" href="#在马德里某公园遛弯">在马德里某公园遛弯</a></h2>
+<p>西班牙之行的最后一个整天，马德里实在没什么好玩的，地图上看到一个公园，天气也还好，过去转转。</p>
+<p>很想高迪，和那座处处可以看到他留下的痕迹的城市。巴特罗之家大概是我印象里参观得最开心的景点（大部分情况下，我对“景点”这个词兴趣缺缺，因为它们的有趣总是并不与他们的拥挤和使人疲惫成正比，但巴特罗之家是一个第一眼看上去就让我从心底喜欢的地方，是一种跳进泳池的快乐。），从那本传记来看，可能也是高迪创作得最自由的建筑之一。</p>
+<p>和他的作品中体现出的自由、创新和生命力相反，高迪本人给我一种有点别扭的感觉，而这种感觉又让我觉得某名亲切。其实我不确定他到底是怎样的人，传记是他人视角，常常有意无意地夸大（我这话是带着感情色彩的，作者事实上做的只是记录一部分而忽略另一部分而已）那些外人可以看到的、具有历史意义的事件，诸如某年上学、某年搬家、某年开始某项工作、某年被某人拒绝、某年去世等等，但作者并不知道，也许也并不关心被传人心里究竟感受到的什么，我是说那些看到阳光洒进窗户、或者听到风吹过树尖的瞬间，但我总觉得只有这些瞬间才能看出一个人是什么样的人。我不知道高迪是怎样的人，我只是根据他的作品和那本小册子里的蛛丝马迹，带有大量个人偏见地在我脑海中构建出这样一个人，然后深深热爱着他。</p>
+<p>马德里比巴塞罗那冷，太阳总是躲在云层之后，只偶尔探出个头，让世界短暂地沐浴那给地球上一切带来生机的金色。公园入口后是很宽很长的一条路，有很多人在路上走着。</p>
+<p>和在Cavilam遇到的朋友一起出来玩，说起来，不知道我们怎么慢慢熟了的，大概是有些投缘的，不过一起旅游大概还需要更大的缘分才能让所有人都开心，关于“待会去哪里”“几点走”“晚上吃什么”之类的问题，我有时候不是很擅长接受别人的意见，而是有了想法就一定要付诸实践，于是一起行动了两三天、心里有些波动并且分析了这些波动之后，我打算自己给自己的旅程做计划，并且如果需要就自己完成它们，结果是，非常乐在其中。很奇怪，前几周还在全心全意思考怎么和人发生更深刻的关系，这两天却发现如果不是特别的人，反而只想自己呆着…</p>
+<p>我在这条路上走，看到许多人，有个声音不停响着：为什么。我在心里问他们每个人：为什么你来公园遛弯？为什么你穿这件衣服？为什么是这样的发型？为什么你和这几个人一起？为什么带你的孩子来这里？为什么抱着他转圈圈？为什么用那种充满感情但没什么实际含义的拟声词对孩子说话？甚至为什么你生了小孩？我这样问了一阵，突然想，好像只有人做事才需要追问原因，而同样的问题如果问旁边一棵树大概会很奇怪，为什么你发芽了？为什么你的树枝往这个方向伸着？嗯…确实奇怪，好像对树或者石头来说，事情的发生只是“因缘和合”，如果有合适的阳光、温度和水，种子就会发芽，没什么原因似的。那人和树之间的界限在什么地方呢？对动物——比如旁边那只走来走去的鸽子——来说，问“你为什么走来走去”是有意义的吗？似乎从人的角度，是可以给这个问题找到一个合理的解释的，例如“觅食”之类，但也有不少是我们解释不了的（虽然人的行为也有很多解释不了，但似乎还是鸽子的秘密更多一些），我总觉得动物甚至小孩子的行为是更自然地发生的，好像他们不纠结那么多似的。</p>
+<p>我接着走，在没什么人的地方坐下来，同时满意地知道是有很多人存在在附近的。和绝大部分人我喜欢保持一种这样的关系——知道他们存在，但仅此而已。我感觉着阳光时隐时现、风时停时起、树和它们的影子在草和土地上晃来晃去，然后某个时候，我站起来接着走，有点想去不远处的湖。</p>
+<p>湖是方形的，我早该想到方形的湖不会是真正的湖的样子，果然上面飘满了蓝白相间的塑料脚蹬船，撒着金色阳光的绿色湖水变成了“周末休闲区”，于是我的游湖到此结束。</p>
+<p>但我发现了一条流进湖水的小溪，虽然也是人造的，但弯弯曲曲的倒也可爱，突然想看看它源头怎样，于是“缘溪行”。路上看到两只半睡的鸭子。尽头是一排石头，掩盖了真正的水源，但一棵缀满纱一样轻盈的白色小花的樱树填补了遗憾，它那样安静又庄严地立在人迹罕至但洒满阳光的草地上，像一位身着白纱的神圣女神。我走进她的枝桠之中，和几只翅膀黑色腹部白色的小鸟一起，目光在一团团白色花瓣和浅黄色花蕊上游走又停留。也许是风，也许没有，花瓣不时飘落，地上已然铺着一片白色。突然一只黄嘴黑羽的乌鸫从树丛跳出，跳进我面前的草地，东啄西啄，然后又跳进树丛看不见了。远处草地上落着的金棕色梧桐叶被一阵风掀起，飞进小溪中，随着水慢慢漂远了。我想之前那一串“为什么”大概对除了人之外的一切确实是没有意义的，事情只是发生，因果关系是人为加上去的。我想给这一切写一首诗，但才疏学浅，终究没有凑成，只是晒了一阵充满花影的阳光。</p>
+<p>湖看了、水源找了，没有方向，暂且随意走去。树，那样多的树，细细看去，每一棵都像一篇长长的故事，或者一个复杂的人生，长或者复杂并不一定意味着特别或者精彩，至少不是一眼看上去就让人感叹的那种，但细细品味一定是有意思的。对一件事物能看到多少，取决于决定在上面花的时间。让我想起文森斯之家的那个导游，或者任何导游，他们对某个物件或者某个故事侃侃而谈的时候，是因为这个物件、这个故事已经像墨水滴进水里一样融入他们的生命中了。</p>
+<p>我在一块块绿色植被之间穿梭，每次远离人群隐入树间都像一头扎入泳池一样快乐。不知道走到什么地方，我突然感觉踩到一件硬硬的东西，低头发现是块石头，细细看去中心处有些紫棕色的光滑，我想带走它，但并不因为它长得像什么东西，它什么也不需要像。</p>
+<p>我脑子里所有这些思绪，是一种平静的激动，他们活跃，但只在远离人烟处。在人群中，尤其是我需要和他们做出互动的时候，我能感觉到我是处在另一种状态的，原子理论中一个词很适合形容这种状态——激发态，有什么东西让我的脑子以另一种模式工作，更多的笑容、惊讶的表情、对别人故事的好奇等等那些让人觉得“这个人并不是块石头”的东西。但那是我吗？“非激发态”又是我吗？</p>
+<p>我感觉冷，手机也要没电了，于是打算离开，走出公园的时候，我感觉自己也远离了那些想法和产生那些想法的心境。我觉得有点饿了。</p>
+<h2 id="美味牛肚"><a class="header" href="#美味牛肚">美味牛肚</a></h2>
+<p>[TODO]关于我吃心心念念很久的黏糊牛肚+面包+烤小青椒+sagria的故事</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../diary/Festivart.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../diary/斥树.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../diary/Festivart.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../diary/斥树.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
