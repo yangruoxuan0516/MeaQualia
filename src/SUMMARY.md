@@ -59,7 +59,7 @@ git push -u origin main --force
     - [斥树](./diary/斥树.md)
     - [下雨了！](./diary/下雨了！.md)
     - [厨房墙上的瓷砖](./diary/厨房墙上的瓷砖.md)
-    - [等一辆陌生的公交车](./diary/等一辆陌生的公交车.md)
+    <!-- - [等一辆陌生的公交车](./diary/等一辆陌生的公交车.md) -->
     - [买了一个法拉费](./diary/买了一个法拉费.md)
     - [Chevrerie De Lily](./diary/chevrerieDeLily.md)
     - [一个要上学的清晨](./diary/一个要上学的清晨.md)
