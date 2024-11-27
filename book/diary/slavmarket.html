@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>slavmarket - meaQualia</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Bienvenu! Bienvenue!</a></li><li class="chapter-item expanded "><a href="../poem/poem.html"><strong aria-hidden="true">1.</strong> 诗啊</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../poem/mypoem.html"><strong aria-hidden="true">1.1.</strong> 一些习作</a></li></ol></li><li class="chapter-item expanded "><a href="../diary/0.html"><strong aria-hidden="true">2.</strong> 我的日记</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../diary/放假回家和废话产出计划.html"><strong aria-hidden="true">2.1.</strong> 放假回家和废话产出计划</a></li><li class="chapter-item expanded "><a href="../diary/美丽的人、风和水煮胡萝卜.html"><strong aria-hidden="true">2.2.</strong> 美丽的人、风和水煮胡萝卜</a></li><li class="chapter-item expanded "><a href="../diary/第一次见到小家伙.html"><strong aria-hidden="true">2.3.</strong> 第一次见到小家伙</a></li><li class="chapter-item expanded "><a href="../diary/月嫂阿姨在做饭.html"><strong aria-hidden="true">2.4.</strong> 月嫂阿姨在做饭</a></li><li class="chapter-item expanded "><a href="../diary/一些广场舞经历.html"><strong aria-hidden="true">2.5.</strong> 一些广场舞经历</a></li><li class="chapter-item expanded "><a href="../diary/爸爸小时候天上有很多星星.html"><strong aria-hidden="true">2.6.</strong> 爸爸小时候天上有很多星星</a></li><li class="chapter-item expanded "><a href="../diary/水库！我跳进水库！.html"><strong aria-hidden="true">2.7.</strong> 水库！我跳进水库！</a></li><li class="chapter-item expanded "><a href="../diary/一些可以跨越时间的关系.html"><strong aria-hidden="true">2.8.</strong> 一些可以跨越时间的关系</a></li><li class="chapter-item expanded "><a href="../diary/标签意味着长大吗.html"><strong aria-hidden="true">2.9.</strong> 标签意味着长大吗</a></li><li class="chapter-item expanded "><a href="../diary/非常非常非常难过.html"><strong aria-hidden="true">2.10.</strong> 非常非常非常难过</a></li><li class="chapter-item expanded "><a href="../diary/偷闲、红樱桃月饼、人和开集.html"><strong aria-hidden="true">2.11.</strong> 偷闲、红樱桃月饼、人和开集</a></li><li class="chapter-item expanded "><a href="../diary/电磁学基础的浪漫——我看向远方的时候在想什么？.html"><strong aria-hidden="true">2.12.</strong> 电磁学基础的浪漫——我看向远方的时候在想什么？</a></li><li class="chapter-item expanded "><a href="../diary/这首歌让我想起我也曾生活.html"><strong aria-hidden="true">2.13.</strong> 这首歌让我想起我也曾生活</a></li><li class="chapter-item expanded "><a href="../diary/花钱好开心.html"><strong aria-hidden="true">2.14.</strong> 花钱好开心</a></li><li class="chapter-item expanded "><a href="../diary/WEI-野蛮地生活.html"><strong aria-hidden="true">2.15.</strong> WEI-野蛮地生活</a></li><li class="chapter-item expanded "><a href="../diary/和妈妈打电话好开心.html"><strong aria-hidden="true">2.16.</strong> 和妈妈打电话好开心</a></li><li class="chapter-item expanded "><a href="../diary/什么戏剧旅行、什么戏剧盲盒、什么戏剧生活.html"><strong aria-hidden="true">2.17.</strong> 什么戏剧旅行、什么戏剧盲盒、什么戏剧生活</a></li><li class="chapter-item expanded "><a href="../diary/活着干嘛.html"><strong aria-hidden="true">2.18.</strong> 活着干嘛</a></li><li class="chapter-item expanded "><a href="../diary/窗外一只鸟飞过.html"><strong aria-hidden="true">2.19.</strong> 窗外一只鸟飞过</a></li><li class="chapter-item expanded "><a href="../diary/M.BouhierEtLePterosaure.html"><strong aria-hidden="true">2.20.</strong> le ptérosaure</a></li><li class="chapter-item expanded "><a href="../diary/我的屋子、我的地毯.html"><strong aria-hidden="true">2.21.</strong> 我的屋子、我的地毯</a></li><li class="chapter-item expanded "><a href="../diary/在法国剁手pdd.html"><strong aria-hidden="true">2.22.</strong> 在法国剁手pdd</a></li><li class="chapter-item expanded "><a href="../diary/如果哪天我去vipassana，那么这就是开端.html"><strong aria-hidden="true">2.23.</strong> 如果哪天我去vipassana，那么这就是开端</a></li><li class="chapter-item expanded "><a href="../diary/parrainage.html"><strong aria-hidden="true">2.24.</strong> parrainage TODO</a></li><li class="chapter-item expanded "><a href="../diary/villagefrançais.html"><strong aria-hidden="true">2.25.</strong> Village Français</a></li><li class="chapter-item expanded "><a href="../diary/在泳池底看星和极光.html"><strong aria-hidden="true">2.26.</strong> 在泳池底看星和极光</a></li><li class="chapter-item expanded "><a href="../diary/像anne一样幻想.html"><strong aria-hidden="true">2.27.</strong> 像anne一样幻想</a></li><li class="chapter-item expanded "><a href="../diary/slavmarket.html" class="active"><strong aria-hidden="true">2.28.</strong> slavmarket</a></li><li class="chapter-item expanded "><a href="../diary/beautyfilteroverthepast.html"><strong aria-hidden="true">2.29.</strong> beauty filter over the past</a></li><li class="chapter-item expanded "><a href="../diary/rdvavecjoris.html"><strong aria-hidden="true">2.30.</strong> rdv avec joris</a></li><li class="chapter-item expanded "><a href="../diary/Festiv'art.html"><strong aria-hidden="true">2.31.</strong> Festiv'art</a></li><li class="chapter-item expanded "><a href="../diary/espagna.html"><strong aria-hidden="true">2.32.</strong> Espagna</a></li><li class="chapter-item expanded "><a href="../diary/斥树.html"><strong aria-hidden="true">2.33.</strong> 斥树</a></li><li class="chapter-item expanded "><a href="../diary/下雨了！.html"><strong aria-hidden="true">2.34.</strong> 下雨了！</a></li><li class="chapter-item expanded "><a href="../diary/厨房墙上的瓷砖.html"><strong aria-hidden="true">2.35.</strong> 厨房墙上的瓷砖</a></li><li class="chapter-item expanded "><a href="../diary/等一辆陌生的公交车.html"><strong aria-hidden="true">2.36.</strong> 等一辆陌生的公交车</a></li><li class="chapter-item expanded "><a href="../diary/买了一个法拉费.html"><strong aria-hidden="true">2.37.</strong> 买了一个法拉费</a></li><li class="chapter-item expanded "><a href="../diary/chevrerieDeLily.html"><strong aria-hidden="true">2.38.</strong> Chevrerie De Lily</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">meaQualia</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>和 Nastiia 逛了一家俄超，她拿起一个后来我尝了尝觉得又像饼干又像面包的东西说“我爸爸很喜欢吃这个”的时候，我突然意识到我们看到的是确实是同一个东西但完全不是一个同东西，我看到的是印着红色图案和不认识字母的塑料包装纸包着的棕色长方形饼状物，她看到的，或者“看-反应”这个过程已经太过短暂和自动化可以忽略，而更应该说她脑海中反应出的是，关于这个“印着红色图案和奇怪字母的塑料包装纸包着的棕色长方形饼状物”的印象，诸如名字、味道、口感、祖国、童年和“爸爸喜欢吃”等等。这个过程好像操作系统里讲到的system call...</p>
+<p>我在读贬低唯心主义的高中政治课本时就被唯心主义说服了，至少到现在都仍然很认同，我们对世界的印象，说到底就是心里的影儿嘛。就像那门教授喜欢用文绉绉的哲学词汇但我某名上得很带劲的“现代科学中的哲学”课上说到过的：科学中的那些定理，可能并不是事实本身，而只是人类试图描述或者揭示规律的一种表达方式（而其他表达方式的存在也是非常有可能的，如果我们有另外的感官，或者历史上某个大牛发现过另外的表达方式）。个人觉得，这个说法既无法证明，也无法证伪，但确实有点“咸妙”的迷人。这样看，我对世界的理解，大概与真相相去甚远，不过反正事实无法认知，或者认知了也无法证明认知的正确性，就无所谓追求对真相的了解了吧，只是活在感知里，就很足够了。说起来，这个语境下，那些心灵书籍提出的“感知本身就是真相”的说法到还十分自洽，怪不得吸引到被不可知论吸引到的我。（关于“咸妙”这个词，大概和那个俄罗斯饼干很类似，我脑子里有一些对它的印象和理解，所以用这个词是表达我对它的印象，而没有这些印象的人看到，大概只是看到这两个字本身，然后觉得有点不明所以... 其实是《和佛陀一起吃早餐》里仁波切因为口音把“玄妙”说成“咸妙”，当然原文是英文，所以这个“咸妙”也只是译者的选择，但我看多了觉得很亲切可爱，这里刚好想用“玄妙”，又有点在哲学宗教的语境下，所以感觉说成“咸妙”很有意思... 天，我脑子里想了这么长一段话？）</p>
+<p>另外从一个更日常，或者更“写那种适合午后懒洋洋看的散文的作者”的角度说，Nastiia 看到的是她对过去的回忆，而且即使她试图讲述那些故事，我恐怕也无法完全共情，不过就算这样，她口中那些生活中的细节也像像宝玉那组“四时即事”一样闪着“彩虹尽头的金子”（不好意思我又开始用没人懂的怪梗了，是“小熊维尼里有一次他们去找彩虹尽头的金子，彩虹消失了也没找到，反而一路上捡到了什么蓝色的知更鸟蛋壳和彩色的浆果，收获了友谊的快乐”这个故事里的，所以“彩虹尽头的金子”给我一种遥不可及但金光闪闪的感觉）似的细碎的光。</p>
+<p>俄罗斯冰激凌是真的好吃啊！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../diary/像anne一样幻想.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../diary/beautyfilteroverthepast.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../diary/像anne一样幻想.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../diary/beautyfilteroverthepast.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
