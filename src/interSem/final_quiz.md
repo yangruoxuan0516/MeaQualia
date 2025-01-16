@@ -1,11 +1,11 @@
 ## C'est comment le filtre ?
 Pour identifier ce filtre, j'ai utilisé comme la donné un dirac au centre d'une figure de \\(1000\times 1000\\), avec \\(sampling\space step = 1\cdot 10^{-9}\\), et j'ai obtenu le résultat suivant:
 
-![](../2d.png)
+![](./2d.png)
 
 Si on zoom, on voit:
 
-![](../2d_zoom.png)
+![](./2d_zoom.png)
 
 où l'enveloppe est la diffraction d'un carré, mais il est multiplié par des franges qui semblent à la fente de Young.
 
@@ -13,7 +13,7 @@ Si c'est le cas, l'ouverture sera la convolution entre un carré et deux points,
 
 On fait un transformé de Fourier inverse pour vérifier cette hypothèse, il donne:
 
-![](../ift.png)
+![](./ift.png)
 
 on a bien deviné :3
 
@@ -38,6 +38,6 @@ alors la longeur du coté d'un carré est \\(25m\\).
 ## La position des carrés
 Les franges sont verticales alors les carrés sont positionnés horizontalement, et leurs centres sont séparés de \\(333m\\). Ceci est calculé de la même manière que la longeur du coté d'un carré, avec \\(n\\) = \\(3\\).
 
-Je ne sais pas trop comment traiter le déphasage, mais on voit dans le ift qu'un carré et au centre et l'autre est décalé de lui d'une distance de \\(333m\\) horizontalement...
+Je ne sais pas trop comment traiter le déphasage, mais on voit dans le ift qu'un carré et au centre et l'autre est décalé de lui d'une distance de \\(333m\\) horizontalement..
 
 
