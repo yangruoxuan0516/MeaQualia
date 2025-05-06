@@ -58,7 +58,7 @@ git push -u origin main --force
     - [一些关于拓扑的怪想法](./diary/一些关于拓扑的怪想法.md)
     - [在漂浮和坐过山车之间——站9106](./diary/在漂浮和坐过山车之间——站9106.md)
     - [嚼嚼嚼元宵](./diary/嚼嚼嚼元宵.md)
-    - [antibes的透明海水、nice的古老pho店](./diary/antibes的透明海水nice的古老pho店)
+    - [antibes的透明海水、nice的古老pho店](./diary/antibes的透明海水nice的古老pho店.md)
     - [教堂的一点烛火](./diary/教堂的一点烛火.md)
     - [好大一座沙子山！](./diary/好大一座沙子山.md)
 <!-- - [弹幕](./commentaire/0.md)
