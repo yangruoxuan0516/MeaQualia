@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>读paper学到的 - meaQualia</title>
+        <title>教堂的一点烛火 - meaQualia</title>
 
 
         <!-- Custom HTML head -->
@@ -24,19 +24,20 @@
         <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-        <!-- Provide site root to javascript -->
+        <!-- Provide site root and default themes to javascript -->
         <script>
-            var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
@@ -46,8 +47,8 @@
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -61,7 +62,8 @@
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
-            var theme;
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
@@ -74,8 +76,8 @@
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var sidebar = null;
-            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
@@ -111,6 +113,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
@@ -154,21 +157,19 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h3 id="因果关系并不天然明晰"><a class="header" href="#因果关系并不天然明晰">因果关系并不天然明晰</a></h3>
-<p>刚刚看causality分析的paper，在用提出方法判断对于turbulent boundary layer是远端的motion影响近处的motion还是反过来，我一开始在想：这个东西这么experimental吗？难道没有更理论的方法说明谁影响谁吗？就像倾斜放置的木板上滚下来的小球？然后我突然觉得，我多少被从前课本上教的东西误导了。且不说现实中从来没有“理想条件下”，就连那些公式也并不是一直存在的，其中的因果关系也显然不是一开始就如此明了，而是人们在无数观察和实验中发现的。发现宇宙的规律，或者至少是合理的interpretation，也很厉害了。</p>
-<h3 id="不该期望知识的表达都遵循同一框架"><a class="header" href="#不该期望知识的表达都遵循同一框架">不该期望知识的表达都遵循同一框架</a></h3>
-<p>在读paper的时候，总有种怨言——怎么每篇文章的思路都不大一样？如此，我这个对整个领域还未建立大局观的初学者，很难把所有读到的想法放到同一个框架里，以至读了文章，所获却东零西落，不能融会贯通。想想大学以前的课本，总是同一套东西，放在哪里——老师、参考书、甚至网络——所说的东西都大差不差，那种知识学起来，该是多容易。
-刚刚看到一个视频，封面标题“被网络大词驯化”，文字标题“思维固化的原因终于让我给找到了”（且不说它多少有点用“大词”吸引流量，何况不如此恐怕我也不能刷到），突然让我反思从前关于paper的抱怨：每个人建立的认知结构都不一样，表达方法也不一样，我如何能期望他们都用了统一说辞呢？那样反而会限制了每个人的写作吧。</p>
+                        <p>我觉得那教堂有趣，是从盯着一小团烛火开始的，蜡烛是一根普通得不能再普通的细长的白色蜡烛，但那火！轻轻一点，却那样明亮、那样纯净、那样千变万化地微微摇曳着，火真是一种有趣的东西，从爷爷奶奶家的灶台，到nonna、nonna家的壁炉，我可以盯着里面的火苗看上几个小时。这一小团火和托着它的蜡烛一样细长，显出一种fragile的美感，空气静止的时候，它底端围绕着一条黑黑的烛芯，顶端稍稍分出三个小尖，通体呈现出有点透明的黄橘色，在幽暗的教堂里显得格外明亮，甚至把周围一小圈空气也照亮了，手伸到这光芒里，感到一种纯粹得好像能吞噬事物的热量。</p>
+<p>借由对这小团烛火的沉思，我的思绪好像被拉近某种沉静的磁场，细细看那彩色玻璃窗投在坑洼但光滑的石头地面上的模糊了边缘的光，看那连腰上装饰和脚下小鸟都雕刻得细致入微的古老石像下新近换过的鲜花，我不懂什么雕像、油画、墙上刻着的名字和圣经引文背后的大故事和大道理，只是觉得那石头上浅浅一条纹路、花瓶里才装上的清水，都是某个未曾谋面、不知姓名、但真实存在过的人用他/她的双手在世界上留下的痕迹。</p>
+<p>但同时，我又感到一种孤独，不是前不见古人后不见来者的空旷，而是见到了古人与来者的痕迹，却对他们的内心一无所知的陌生，我见到他们的痕迹，但无从知晓他们的内心，就像我的日记——这些公之于众的只是我写下文字的冰山一角，有更多的细碎无趣而不屑编辑、困惑抱怨而不敢公开，更何况，又有多少无声无息地到来又离开而从未被我注意呢？</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../commentaire/我们生活在巨大的差距里.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../diary/antibes的透明海水nice的古老pho店.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../commentaire/陀思妥利卡啦啦.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../diary/好大一座沙子山.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -178,11 +179,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../commentaire/我们生活在巨大的差距里.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../diary/antibes的透明海水nice的古老pho店.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../commentaire/陀思妥利卡啦啦.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../diary/好大一座沙子山.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

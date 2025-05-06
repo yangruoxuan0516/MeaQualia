@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>诗里特别有禅 - meaQualia</title>
+        <title>好大一座沙子山！ - meaQualia</title>
 
 
         <!-- Custom HTML head -->
@@ -24,19 +24,20 @@
         <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-        <!-- Provide site root to javascript -->
+        <!-- Provide site root and default themes to javascript -->
         <script>
-            var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
@@ -46,8 +47,8 @@
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -61,7 +62,8 @@
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
-            var theme;
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
@@ -74,8 +76,8 @@
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var sidebar = null;
-            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
@@ -111,6 +113,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
@@ -154,31 +157,20 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="诗里特别有禅"><a class="header" href="#诗里特别有禅">《诗里特别有禅》</a></h1>
-<h3 id="贪生怕死"><a class="header" href="#贪生怕死">贪生怕死</a></h3>
-<p><em>陶渊明说：‘纵浪大化中，不喜亦不惧。应尽便须尽，无复独多虑。’（《形影神》）生死是自然的过程，一味贪生怕死，又因贪生怕死而生出无穷欲念、荒唐行径，生命的自然性就被破坏掉了，成为无根的浮嚣。</em></p>
-<p>陶渊明描述的状态是理想中的状态，但在我看来绝不是（生物角度上）“自然”的（但作者所谓“自然”可能是文人语境下的类似“道”“大化”的那种超脱的、本质的、平静的存在），我被达尔文主义深深说服，相信绝大部分生物都是自然而然、根深蒂固地贪生怕死的。贪生怕死固然是欲望，但一定要被提高到荒唐和浮嚣的高度来批判吗？或者贪和怕本身就带着旁观者的道德批判了，否则何不用“追求”和“躲避”这样的中性词？</p>
-<h3 id="随波逐流"><a class="header" href="#随波逐流">随波逐流</a></h3>
-<p><em>行到水穷处，去不得处，我亦便止。倘有云起，我便坐而看云起。坐久当还，偶值林叟，便与谈论山间水边之事，相与留连，则不能以定还期矣。于佛法看来，总是无我，行无所事。”</em></p>
-<p>前两天和林巍峣打电话的时候，他用种在首次联系的prof们身上少见的诚实语气和我说：课程嘛，过了就好，但没必要刷到很高分数；多花点时间在做研究上，对研究生阶段才更重要。他还说：很多projet做了，其实和后面研究生阶段的方向并没什么关系，那完全是浪费时间嘛。
-可我好像觉得，“这里试一下，那里试一下，谁告诉我做什么就做一下看看”的，像小溪里跟着水流飘来飘去的草一样的生活，也不是完全没有可取之处？</p>
-<h3 id="宗教是私人的"><a class="header" href="#宗教是私人的">宗教是私人的</a></h3>
-<p><em>开头两句是说：从心外去寻觅真知，寻求‘开悟’的路径，结果总是越走越远，真我面目不可复得。这是佛教常说的基本道理。但作为禅宗来说，这种道理不能只是道理，需要一个切身的经验，一个特别的机缘，才能引起内心的震撼，忽然而悟。</em></p>
-<p>在法国各种机缘巧合遇到不少基督教教会，我本以为自己对各个宗教都普遍地感兴趣，于是并不排斥他们来向我“传福音”，反而视此为诘问信仰奥秘的途径。
-对我来说，比较之下，我所了解的基督教（下文简称“基督教”）比我所了解的佛教（下文简称“佛教”）要玄学得多。在里昂参观某教堂拿了一本《新约全书》，序言里写着：“要成为基督徒，你要做的就是：一，承认自己是个罪人。二，愿意悔改离开罪。三，相信耶稣基督在十字架上为你而死，并复活了。四，接纳耶稣基督做你的救主和你一生的主宰；借着祷告，邀请耶稣基督进入你心里，管理你的生命。”要我相信自己有罪并把获得拯救的机会交到一个让我莫名其妙就要相信的人手里，这段话无论读几遍都让我觉得十分冒犯。
-但基督教那么长时间以来成为那么多人的信仰，总不至于全是平白无故莫名其妙的吧？于是我像个ethnographer似的来到教会，听他们分享入教的经历和理由。全是很个人的体验，于是私心揣测是不是基督教倒在其次，只是需要个什么东西来慰藉灵魂，而基督教恰好出现了，好像骆老所谓“先有爱情，再有爱人”。</p>
+                        <p>今天要去dune！</p>
+<p>走去山脚的路上浅浅一层沙已经让我注意到沙子的金黄柔软和毫无杂质，但直到见了那片斜斜升起的沙坡，才被那巨大体积和体积背后不知多少年的时间带来力量和沉静摄去了心神，但同时它又仿佛大地母亲般显出迷人的柔和和安详，让我想要跌倒在那无边怀抱里，并且深知永远不可能受伤。我于是随地坐下，脱了鞋袜，塞进背包，开始攀爬。漫漫沙坡，我唯一的目标就是走向她更深的深处。光脚踩在沙地上，表面的沙子带着阳光的温度，深处的凉爽显出深邃和温柔，一步步前行又一步步陷落在柔软的浅坑，细细的沙粒在脚底轻轻摩擦，沙地在阳光下向四周展开，我只是攀爬。</p>
+<p>到顶上，四下望去，左右两侧，巨大的沙坡分开大海和森林，而前方，沙丘向远处蔓延。但风景和明信片上并无二致，用身体和这片土地交融才是我此行的目的——我很快找到了更有趣的游戏。</p>
+<p>向上爬时并不觉得，但在顶上向下看去，沙坡下降角度之大让我轻声惊叹，但同时我又深知这柔软的沙子没有半点可能伤害到我，于是我开始奔跑，在无边的下落的金黄色的柔软中奔跑，我一步比一步跨得更远，每一次跳跃都带来更加美妙的飞落。啊呀，我可能一辈子都走在追求贾非山羊般在大石块上跳跃下山的道路上了吧。</p>
+<p>这样，我到了海边，空旷、平坦的沙滩，透明、安静的海水，我踏进那水，踏进另一种包容的抚慰，但她们有同样的源头。</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../commentaire/0.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../diary/教堂的一点烛火.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../commentaire/厌女.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -186,13 +178,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../commentaire/0.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../diary/教堂的一点烛火.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../commentaire/厌女.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
