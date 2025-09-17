@@ -61,6 +61,8 @@ git push -u origin main --force
     - [antibes的透明海水、nice的古老pho店](./diary/antibes的透明海水nice的古老pho店.md)
     - [教堂的一点烛火](./diary/教堂的一点烛火.md)
     - [好大一座沙子山！](./diary/好大一座沙子山.md)
+    - [银屏昨夜微寒](./diary/银屏昨夜微寒.md)
+    - [玉兰苑二楼](./diary/玉兰苑二楼.md)
 <!-- - [弹幕](./commentaire/0.md)
     - [诗里特别有禅](./commentaire/诗里特别有禅.md)
     - [厌女](./commentaire/厌女.md)
