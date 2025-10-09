@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2025年的中秋节 - meaQualia</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">meaQualia</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="第一天到家"><a class="header" href="#第一天到家">第一天到家</a></h2>
+<p>回家第一天毫无悬念地是最开心的一天，落地后跑道侧边的灯一闪一闪的都好像在招呼着我，说“你回来啦”。</p>
+<p>到家之后，我喜欢到处乱转，在这个又熟悉又陌生的空间里，寻找留存的记忆：餐桌旁的各种零碎还和上次回来一样摆放着，我喜欢一个个把它们拿起来，在手里摆弄一下再放回去；鱼缸里的鱼还是原来的两条（因为都是母鱼，所以不会再生小鱼了），在疯长的水草丛中钻来钻去；从前做的小玩意儿、旅行带回来的纪念品，也都好好地堆在原来的地方，拿起一个就拿起一段回忆。</p>
+<p>第一天到家的感觉像是冬日里走进一家温暖的餐厅：卸下沉重的包裹好比褪去落满风霜的外衣，走进家庭生活带来的壁炉里的焰火似的温暖，收到最最热情的欢迎——爸爸竟然亲手包了饺子，一边煮一边叙述他如何在今早去市场买了新鲜的肉和蔬菜来做馅儿。</p>
+<p>我享受独自在学校的生活——清淡得会叫姥姥担心的饮食、规律甚至有些过量运动、不必和任何人交谈的图书馆时光，让我有种雕刻自己的快感，但我也喜欢几个月回一次家的节假日安排，一种充满大鱼大肉、饮料炸物、饭后午睡、闲聊胡诌的类似过年的甜腻腻、亮晶晶的“荒淫无度”。单是自律固然乏味，只有放纵也会让我身心俱疲，所以放假虽好，一周足矣，而一周中，最快乐的是“回了自己家、准备回姥姥家”那一小段充满了期待的时光，学校的一切——组会、选课、监考——连同上海那个城市一样统统被我抛在身后，幻想中是有府君山、古街、猫咪和哥哥的蓟州天堂（显然，我会在幻想中忽视高糖高油的放纵带来的沉重、缺乏安静独处时间的焦虑、妹妹淘气我又不知道如何应的的烦躁以及看到姥姥姥爷身体多了一些小毛病的不安…）。而我，在这个美妙的夜晚，会像个除夕夜期待春节、或者平安夜期待圣诞一样的小朋友，在快乐中安然入睡。</p>
+<h2 id="长大一"><a class="header" href="#长大一">长大（一）</a></h2>
+<p>我想我确实长大了，这是我在蒸红薯的时候发现的，我在只用筷子扎了一段红薯，发现可以轻松穿过的时候，就不假思索地关了火，而这之前我每次蒸红薯，都要把每一根都扎一遍，甚至一根要连着扎很多个洞，才敢确定都蒸熟了。</p>
+<p>根据之前某个航班上的某本消磨时间用的杂志，“只有当青春逝去，经验给了我们某种廉价的勇气时，我们大多数人才意识到事情就是这么简单。”红薯就是一段熟了，就全部都熟了。</p>
+<h2 id="长大二"><a class="header" href="#长大二">长大（二）</a></h2>
+<p>我24岁，研究生二年级；学院经常组织就业宣讲会，大我几岁的男朋友总是给我转发实习信息；哥哥在这个假期第一次去参加了同学的婚礼，朋友圈里有学长学姐分享婚纱照、男朋友也和我提过结婚的想法；姥姥已经没信心做出全家人都夸的肉饼，这项任务交给了妈妈；姥爷今年养的花啊、鱼啊，也不像从前那样生机勃勃。</p>
+<p>总有一个声音在提示我，那种“过节是大人们买吃的而我们小孩只管吃、出门是大人们考虑行程而我们小孩只管玩”的无需瞻前顾后的童年生活，快要结束了。什么时候开始的呢？姥爷的自行车带不动我的那一年？姥姥腿脚不好不再和我们一起出门玩的那一年？哥哥上了大学不再和我同一张桌子写假期作业那一年？妹妹出生于是我不能心安理得地作为最小的被全家人照顾的那一年？</p>
+<p>我真怀念那种喝了姥姥用之前的豆浆机做的带着大米颗粒的豆浆、等哥哥过来一起写作业、期间姥姥一盘盘切好削了皮的水果送来、还给我们打开电扇、吃完午饭在姥爷屋看动画片、姥爷睡午觉就去小区里刨沙坑、偷了姥爷的打火机点树枝、在老式显示器上玩4399、晚上和姥姥姥爷看抗日剧、姥姥用剪刀剪开牛奶袋给我喝、听着姥姥的呼噜声入睡的日子，无论什么条件我都愿意再回去体验一次的，可惜、可惜。时光啊、为什么人要长大，让我无法不在姥姥削水果时接过她手里的小刀，让我无法不在哥哥把零食递到我嘴里时有点小小的犹豫？</p>
+<p>回不去的不只是时间，更是心态，哪怕我真的穿越回去，恐怕也只是满心地担心一天天的结束而无法好好享受那平平无奇的幸福了。</p>
+<h2 id="浸血的棉裤"><a class="header" href="#浸血的棉裤">浸血的棉裤</a></h2>
+<p>姑姑们一张嘴就是各种各样的传说，不管她们第几次讲同一个故事，每次都有新的细节。</p>
+<p>这次讲的是奶奶生爸爸的故事。</p>
+<p>我原来就知道，奶奶是在路边一个喇叭杆儿还是路灯杆儿下生的爸爸，然后一个热心的什么婆婆把爸爸揣在棉裤里，才让他没有冻死在寒冬腊月。这故事本身已经足够惊心动魄，谁想这次给它涂上血红的颜色，愈发吓得我发愣，好久才缓过来。</p>
+<p>我从姑姑的叙述中拼凑出这样一个场景：奶奶去生爸爸的路上大出血，晕倒了，孩子被婆婆装进棉裤，奶奶被爷爷用木板车拉回家里，这时候的奶奶脸色雪白，大家急急叫来医生，打了一针管的葡萄糖溶液，奶奶才慢慢醒过来（也真是奶奶“命硬”，谁家大出血能用葡萄糖抢救过来啊），“出了月子还觉得身子虚呢”（我觉得换作我，不大出血也会虚…）。奶奶的妈妈也来了，见了院子里挂着的血浸湿的棉裤，竟疯得乱叫乱唱起来，好像什么鬼怪附体了似的。“那棉裤，全是血，连鞋坑儿里都是血”，姑姑这样回忆道。我好像能看见那院子里挂着的棉裤，淌下的鲜血在腊月天气里微微冒着白气；我好像能看见那十几岁的姑娘，望着这棉裤、听着外祖母胡乱的歌声喊声，不知所措。</p>
+<h2 id="潮白河"><a class="header" href="#潮白河">潮白河</a></h2>
+<p>在堂姐搬家的聚餐后，爸爸妈妈带着我和姑姑们告别，我觉得他们和我一样，不太擅长和一大家子人一起家长里短地聊上半天，可能是读书读多了的缘故，于是我们独自开车走了。</p>
+<p>我们在一条两边是直直高高的树的路上开着，树的后面就是潮白河，一开始路边有很多人钓鱼，慢慢人就少了，最后在一个没人的钓台，爸爸在路边停下车，说：“我们下去看看！”</p>
+<p>我们走下一个小坡到了河边，我回头看看那车，孤零零地斜在坡上，这个角度看不见路，好像我们停在某个荒原中的河边。没有太阳，天和水都灰灰的，水上一层雾气让对岸的树也灰灰的，我感觉像在梦中，爸爸和妹妹往水里扔起石头，咚、咚、咚，然后是妹妹的笑声，铃铛似的打破这寂静，紧接着是爸爸妈妈的说笑。</p>
+<p>我感觉很好，像我嘴里啃着的栗子，一种淡淡的温柔的香甜。</p>
+<h2 id="衣服下的体温"><a class="header" href="#衣服下的体温">衣服下的体温</a></h2>
+<p>和哥哥去取蛋糕的路上，我坐在电动车后座，晚风吹鼓了他的衬衫，衣摆扫过我胳膊的时候，我突然想起那次带着淡淡暖意的触碰。</p>
+<p>似乎是william戏剧节之后，nana回家了，李老师不知道为什么说要等我，于是我们在thevenin门口见面，一起去了车站。</p>
+<p>天黑下来，我们聊着天，不知道说了什么调皮的话，他敲了下我的帽檐。晚风吹过，带着凉意，他说着给我挡风，突然站到我的身边，外套碰到我的胳膊，一阵酥酥的暖意，距离太近，羞得我轻轻躲开这盛情。</p>
+<p>如今想来，那也许是我第一次感受到他的体温。</p>
+<h2 id="衣服"><a class="header" href="#衣服">衣服</a></h2>
+<p>十一假期回家，准备收拾一些厚衣服带去学校，等天冷的时候穿。</p>
+<p>我喜欢“倒腾”衣柜，尤其两年没回家，一件件衣服鱼钩似的，从回忆的池塘里勾起从前的记忆和感受，带点储藏室的阴凉、又带点熏香的暖意，再加上一点欣喜、一点惆怅，胡乱地混在一起。我尤其喜欢翻妈妈从前穿过但现在不穿的那些，她有一些丝绸、棉麻、羊毛之类摸起来很舒服的衣服，颜色也是月白、米黄之类淡淡的，偶尔也有小小一段蕾丝或者细细的花朵纹样，让我想起刚刚读过的“温柔得不会坚持自我形象”的那条“巾”，也有些在岁岁年年的洗礼下已经松了线、漏了洞，让人不免为之可惜。</p>
+<p>我也翻到自己从前的衣服，想到中学某段时间似乎格外偏爱黑色，黑色T恤、裤子、外套、书包，一切有花纹或者带红、粉、紫色的东西都被我嫌弃，似乎有意无意在避开这些所谓“女孩子才喜欢”的东西。而现在，似乎是到了年纪，也开始觉得一点花纹之可爱、一点柔软之迷人、一点明丽色彩之必要。</p>
+<h2 id="一个人在家"><a class="header" href="#一个人在家">一个人在家</a></h2>
+<p>爸爸送妈妈姑姑和妹妹去车站了，我突然有机会一个人在家，一种迫切让我急急地打开书柜抽了几本书，甚至忘了在窗口和她们挥手告别。</p>
+<p>难得这机会回顾童年的阅读时光。</p>
+<p>小时候似乎很爱看书，但是没什么所谓正经书，不是情节有趣的故事，就是句子漂亮的散文。我最擅长的读法是囫囵吞枣，全不花心思记住之前某段说了什么，只管眼前这一句，让想象和感受随着作者的语言起伏，没有帆也没有桨的小船随着水上波浪漂荡似的。</p>
+<p>但好像很久不曾这么读书了，近来甚至觉得自己写不出字，好像没有“源头活水”的水渠，在生活的暴晒下已经干涸了。</p>
+<p>我读起张晓风，虽然有时候觉得她有过多“女性知识分子的矫情和自我感动（女性指传统意义女性特质，并非生理性别）”，但也时常为她细腻的感受和柔软的文笔所触动，我喜欢为漂亮动人的文字而哭，到底是哭自己，做人总让我觉得很不容易，哭是最无害的发泄方式。</p>
+<h2 id="受伤"><a class="header" href="#受伤">受伤</a></h2>
+<p>我在自告奋勇地刮鱼鳞时，扎伤了手指，血呼呼地往外冒，我喊了一声，在厨房的妗妗立刻问我怎么了，姥姥听见也问我怎么了，然后她们立刻把我“轰”出了厨房，哥哥已经从姥爷那里拿来了碘酒和创可贴，给我消毒然后包好，我又小声唧唧歪歪怕姥爷的碘酒过期不能杀死海洋鱼类的病菌，哥哥拿了钥匙就骑车带我去了药店。</p>
+<p>我觉得自己矫情得无可救药，但坐在车后面吹着风仍然极其享受。</p>
+<p>随后的几天她们都让我不要帮忙做饭、洗碗、擦桌子，我就在家里心安理得地跳来跳去、招猫递猫。</p>
+<p>假期结束回到学校，伤口还有点血迹，但我不管不顾地游了泳、洗了衣服，血迹不知道什么时候消失了。</p>
+<p>我感觉自己在家脆弱得像个瓷娃娃，游泳就脚踝疼、爬山就膝盖疼、手腕说不出什么原因就开始疼，一到学校什么都好了，真是奇怪。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../diary/玉兰苑二楼.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../diary/玉兰苑二楼.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
