@@ -5,4 +5,5 @@ language = "en"
 src = "src"
 title = "meaQualia"
 [output.html]
+additional-js = ["plausible.js"]
 mathjax-support = true
