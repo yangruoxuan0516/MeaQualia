@@ -1,7 +1,7 @@
 [book]
 authors = ["ruox"]
 language = "en"
-multilingual = true
+# multilingual = true
 src = "src"
 title = "meaQualia"
 [output.html]
