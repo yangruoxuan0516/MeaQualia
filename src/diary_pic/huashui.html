@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>划水</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: rgba(100, 150, 150);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      cursor: crosshair;
+    }
+    .hint {
+      position: fixed;
+      left: 12px;
+      bottom: 12px;
+      padding: 6px 10px;
+      background: rgba(100, 150, 150);
+      border-radius: 6px;
+      font-size: 12px;
+      color: #a7bce9;
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="waterCanvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById("waterCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // --- 尺寸和高度场参数 ---
+    let width, height;        // canvas 像素尺寸
+    let cols, rows;           // 高度场网格尺寸
+    const gridScale = 2;      // 一个网格对应多少个像素
+    let size;                 // cols * rows
+
+    // 高度场缓冲区：prev, curr, next
+    let prev, curr, next;
+
+    const damping = 0.99;     // 衰减系数
+    const maxVisualHeight = 6;// 用于颜色映射的最大高度
+
+    // 鼠标状态
+    let isDrawing = false;
+    let lastGX = null;
+    let lastGY = null;
+
+    // --- 初始化 canvas 和高度场 ---
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      width = canvas.width;
+      height = canvas.height;
+
+      cols = Math.floor(width / gridScale);
+      rows = Math.floor(height / gridScale);
+      size = cols * rows;
+
+      prev = new Float32Array(size);
+      curr = new Float32Array(size);
+      next = new Float32Array(size);
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    // 工具：网格坐标转索引
+    function idx(x, y) {
+      return x + y * cols;
+    }
+
+    // --- 在高度场上制造扰动（一个“水滴”） ---
+    function disturb(gx, gy, radius = 2, strength = 3) {
+      for (let y = -radius; y <= radius; y++) {
+        const py = gy + y;
+        if (py < 1 || py >= rows - 1) continue;
+        for (let x = -radius; x <= radius; x++) {
+          const px = gx + x;
+          if (px < 1 || px >= cols - 1) continue;
+          if (x * x + y * y <= radius * radius) {
+            curr[idx(px, py)] -= strength;
+          }
+        }
+      }
+    }
+
+function disturbDirectional(gx, gy, vx, vy, trailLen = 10, strength = 3) {
+  // 在运动方向的反方向(后面)，画一条长度为 trailLen 的尾巴
+  for (let s = 0; s < trailLen; s++) {
+    const t = s / trailLen;                 // 0 ~ 1
+    const px = Math.round(gx - vx * s);     // 往反方向拉
+    const py = Math.round(gy - vy * s);
+
+    if (px < 1 || px >= cols - 1 || py < 1 || py >= rows - 1) continue;
+
+    // 让尾巴越远越弱
+    const baseAmp = - strength * (1 - t);
+
+    // 尾巴横向稍稍有一点厚度（小十字形）
+    curr[idx(px, py)] += baseAmp;
+    curr[idx(px + 1, py)] += baseAmp * 0.6;
+    curr[idx(px - 1, py)] += baseAmp * 0.6;
+    curr[idx(px, py + 1)] += baseAmp * 0.6;
+    curr[idx(px, py - 1)] += baseAmp * 0.6;
+  }
+}
+
+
+    // --- 鼠标事件，按“移动距离”插值制造扰动 ---
+    canvas.addEventListener("mousedown", (e) => {
+      isDrawing = true;
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const gx = Math.floor(x / gridScale);
+      const gy = Math.floor(y / gridScale);
+      lastGX = gx;
+      lastGY = gy;
+      disturb(gx, gy);
+    });
+
+    window.addEventListener("mouseup", () => {
+      isDrawing = false;
+      lastGX = null;
+      lastGY = null;
+    });
+
+    canvas.addEventListener("mouseleave", () => {
+      isDrawing = false;
+      lastGX = null;
+      lastGY = null;
+    });
+
+    canvas.addEventListener("mousemove", (e) => {
+      if (!isDrawing) return;
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const gx = Math.floor(x / gridScale);
+      const gy = Math.floor(y / gridScale);
+
+      if (lastGX === null || lastGY === null) {
+        lastGX = gx;
+        lastGY = gy;
+        return;
+      }
+
+      const dx = gx - lastGX;
+      const dy = gy - lastGY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist === 0) return;
+
+      const vx = dx / dist;   // 单位方向向量
+      const vy = dy / dist;
+
+      // 按距离在路径上插值，多点扰动
+      const steps = Math.ceil(dist);
+      for (let i = 0; i <= steps; i++) {
+        const t = i / steps;
+        const igx = Math.floor(lastGX + dx * t);
+        const igy = Math.floor(lastGY + dy * t);
+        // disturb(igx, igy);
+        disturbDirectional(igx, igy, vx, vy);  // ⭐ 新函数
+      }
+
+      lastGX = gx;
+      lastGY = gy;
+    });
+
+    // --- 高度场更新（核心波动公式） ---
+    function updateHeightField() {
+      for (let y = 1; y < rows - 1; y++) {
+        const yOffset = y * cols;
+        const upOffset = (y - 1) * cols;
+        const downOffset = (y + 1) * cols;
+        for (let x = 1; x < cols - 1; x++) {
+          const i = x + yOffset;
+          const left = i - 1;
+          const right = i + 1;
+          const up = x + upOffset;
+          const down = x + downOffset;
+
+          const lap =
+            (curr[left] + curr[right] + curr[up] + curr[down]) / 2 -
+            prev[i];
+
+          next[i] = lap * damping;
+        }
+      }
+
+      // 交换缓冲区引用
+      const tmp = prev;
+      prev = curr;
+      curr = next;
+      next = tmp;
+    }
+
+// 线性插值工具
+function lerp(a, b, t) {
+  return a + (b - a) * t;
+}
+
+// --- 渲染：以背景色为基准，上下波纹分别变亮/变暗 ---
+function render() {
+  const img = ctx.getImageData(0, 0, width, height);
+  const data = img.data;
+
+  // 背景色（和 CSS 里保持一致）
+  const base = { r: 100, g: 150, b: 150 };
+
+  // 先整体填充背景
+  for (let i = 0; i < data.length; i += 4) {
+    data[i]     = base.r;
+    data[i + 1] = base.g;
+    data[i + 2] = base.b;
+    data[i + 3] = 255;
+  }
+
+  const scale = 1 / maxVisualHeight;
+
+  for (let gy = 0; gy < rows; gy++) {
+    for (let gx = 0; gx < cols; gx++) {
+      const h = curr[idx(gx, gy)];
+
+      // 太小的波纹就不画，免得噪点
+      if (Math.abs(h) <= 0.02) continue;
+
+      let hNorm = Math.min(Math.abs(h) * scale, 1); // 0 ~ 1
+
+      // 正高度：变亮；负高度：变暗
+      const highlight = { r: 190, g: 230, b: 230 }; // 鼓起时的高亮颜色
+      const shadow    = { r:  60, g: 100, b: 100 }; // 下陷时的阴影颜色
+
+      let target;
+      if (h > 0) {
+        // 从 base → highlight
+        target = highlight;
+      } else {
+        // 从 base → shadow
+        target = shadow;
+      }
+
+      const r = Math.round(lerp(base.r, target.r, hNorm));
+      const g = Math.round(lerp(base.g, target.g, hNorm));
+      const b = Math.round(lerp(base.b, target.b, hNorm));
+
+      const startX = gx * gridScale;
+      const startY = gy * gridScale;
+
+      for (let py = 0; py < gridScale; py++) {
+        const y = startY + py;
+        if (y >= height) break;
+        for (let px = 0; px < gridScale; px++) {
+          const x = startX + px;
+          if (x >= width) break;
+          const index = (y * width + x) * 4;
+          data[index]     = r;
+          data[index + 1] = g;
+          data[index + 2] = b;
+          data[index + 3] = 255;
+        }
+      }
+    }
+  }
+
+  ctx.putImageData(img, 0, 0);
+}
+
+
+    // --- 动画循环 ---
+    function loop() {
+      updateHeightField();
+      render();
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+  </script>
+</body>
+</html>
