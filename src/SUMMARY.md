@@ -65,6 +65,7 @@ git push -u origin main --force
     - [玉兰苑二楼](./diary/玉兰苑二楼.md)
     - [2025年的中秋节](./diary/2025年的中秋节.md)
     - [划水](./diary/划水.md)
+    - [杨若萱象限](./diary/杨若萱象限.md)
 <!-- - [弹幕](./commentaire/0.md)
     - [诗里特别有禅](./commentaire/诗里特别有禅.md)
     - [厌女](./commentaire/厌女.md)
