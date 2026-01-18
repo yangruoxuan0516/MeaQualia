@@ -66,3 +66,4 @@ git push -u origin main --force
     - [划水](./diary/划水.md)
     - [杨若萱象限](./diary/杨若萱象限.md)
     - [在宿舍度过的周末](./diary/在宿舍度过的周末.md)
+    - [吃面](./diary/吃面.md)
