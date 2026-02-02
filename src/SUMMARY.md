@@ -16,7 +16,7 @@ git config --global http.sslBackend "openssl"
 git push -u origin main --force
  -->
 
-[Bienvenu! Bienvenue!](./README.md)
+[Bienvenue! Bienvenu!](./README.md)
 - [诗啊](./poem/0.md)
     - [一些习作](./poem/mypoem.md)
 - [我的日记](./diary/0.md)
